@@ -1,8 +1,0 @@
-model mymodel (1.0) "a template data model"
-  author "me"
-  
-  include "../build/tmp/IVOA-v1.0.vodsl"
-  
-  otype Another "an example otype" {
-  	att: ivoa:string "describe me";
-  }
