@@ -3,7 +3,10 @@ ExecutionBrokerDM
 
 This project expresses the executionBroker DM using VO-DML and [vodml tools](https://github.com/ivoa/vo-dml).
 
-The real source is in [model/ExecutionBrokerDM-v1.vodsl](model/ExecutionBrokerDM-v1.vodsl)
+The real source is in [model/ExecutionBrokerDM-v1.vodsl](model/ExecutionBrokerDM-v1.vodsl).
+
+The [ExecutionBrokerDM documentation](https://pahjbo.github.io/ExecutionBrokerDM/) is published on GitHub pages with CI.
+
 
 ```shell
 gradle vodslToVodml
