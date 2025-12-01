@@ -13,7 +13,7 @@ otype AbstractExecutable  -> AbstractComponent  "Abstract base class for executa
  {
 }
 
-otype DockerPlatformSpec  "Details of the platform the container image is built for. Debatable whether we need to have this here. The information will be in the container, and the platform will probably need to check it anyway to make sure. So why have the duplicate information ?"
+dtype DockerPlatformSpec  "Details of the platform the container image is built for. Debatable whether we need to have this here. The information will be in the container, and the platform will probably need to check it anyway to make sure. So why have the duplicate information ?"
  {
  architecture : ivoa:string "The CPU architecture the image is built for. The default is `amd64`."; 
  os : ivoa:string "The operating system the image is built for. The default is `linux`."; 
@@ -26,16 +26,17 @@ otype DockerImageSpec  "Details of the container image."
  platform : DockerPlatformSpec ""; //ref originally
 }
 
-otype NameValueMap  "A map of name->value properties. See https://swagger.io/docs/specification/data-models/dictionaries/"
+dtype NameValueMap  "A map of name->value properties. See https://swagger.io/docs/specification/data-models/dictionaries/"
  {
+ 	//FIXME what is this actually doing
 }
 
-otype DockerInternalPort  "Details of an internal network port on a container."
+dtype DockerInternalPort  "Details of an internal network port on a container."
  {
  port : ivoa:integer "The port number on the container to publish. This should be defined as part of the description of the executable."; 
 }
 
-otype DockerExternalPort  "Details of an external network port accessible from outside."
+dtype DockerExternalPort  "Details of an external network port accessible from outside."
  {
  port : ivoa:integer "The port number of the external interface. The service will populate this value when it sets up the execution."; 
  addresses : ivoa:string @+ "A list of public hostnames or IPv4 or IPv6 addresses for the external interface. The service will populate this list when it sets up the execution.";
@@ -52,16 +53,16 @@ otype DockerNetworkPort  "Details of a network port on the container made availa
 
 otype DockerNetworkSpec  "Details of the network access available to the container."
  {
- ports  : DockerNetworkPort @+ "An array of network ports to publish."; // ref originally
+ ports  : DockerNetworkPort @+ as composition  "An array of network ports to publish."; // ref originally
 }
 
 otype DockerContainer  -> AbstractExecutable  "Details for a Docker or OCI container executable. See https://opencontainers.org/"
  {
- image : DockerImageSpec "Details of the container image."; //ref originally
+ image : DockerImageSpec as composition "Details of the container image."; //ref originally
  privileged : ivoa:boolean "Set the privileged flag on execution. The default is `false`. See https://docs.docker.com/reference/cli/docker/container/run/#privileged."; 
  entrypoint : ivoa:string "Overwrite the default ENTRYPOINT of the image."; 
  environment : NameValueMap "A name => value map of environment variables to pass to the container."; //ref originally
- network : DockerNetworkSpec "Details of the network access available to the container."; //ref originally
+ network : DockerNetworkSpec as composition "Details of the network access available to the container."; //ref originally
 }
 
 otype SingularityContainer  -> AbstractExecutable  "Details for a Singularity container executable. See https://docs.sylabs.io/guides/latest/user-guide/"
@@ -128,14 +129,14 @@ otype ComponentMetadata  "A metadata block for our components. This includes a n
  description : ivoa:string "A human readable description."; 
  created : ivoa:string "The date and time the component was created."; 
  modified : ivoa:string "The date and time the component was last modified."; 
- messages  : MessageItem @+ "A list of messages about this component."; // ref originally
- options  : AbstractOption @+ "A List of options the client can apply to this component."; // ref originally
+ messages  : MessageItem @+ as composition "A list of messages about this component."; // ref originally
+ options  : AbstractOption @+ as composition "A List of options the client can apply to this component."; // ref originally
 }
 
 otype AbstractComponent  "Abstract base class for all our components."
  {
  kind : ivoa:string "The component type identifier."; 
- meta : ComponentMetadata "The component metadata."; //ref originally
+ meta : ComponentMetadata as composition "The component metadata."; //ref originally
 }
 
 enum LifecyclePhase "Lifecycle phase values." {
@@ -154,7 +155,7 @@ primitive ISO8601Instant -> ivoa:string "A regular expression filter for an ISO 
 
 primitive ISO8601Duration -> ivoa:string "A regular expression filter for an ISO 8601 duration."
 
-otype LifecycleStartDurationInstant  "A lifecycle instant and duration."
+dtype LifecycleStartDurationInstant  "A lifecycle instant and duration."
  {
  start : ISO8601Instant ""; //ref originally
  duration : ISO8601Duration ""; //ref originally
@@ -162,13 +163,13 @@ otype LifecycleStartDurationInstant  "A lifecycle instant and duration."
 
 primitive ISO8601Interval -> ivoa:string "A regular expression filter for an ISO 8601 interval. Generated by ChatGPT See https://chatgpt.com/share/68975beb-1298-8008-b439-a0cd06b636cf"
 
-otype LifecycleStartDurationInterval  "A lifecycle interval and duration."
+dtype LifecycleStartDurationInterval  "A lifecycle interval and duration."
  {
  start : ISO8601Interval ""; //ref originally
  duration : ISO8601Duration ""; //ref originally
 }
 
-otype LifecycleSchedule  "Lifecycle schedule."
+dtype LifecycleSchedule  "Lifecycle schedule."
  {
  preparing : LifecycleStartDurationInstant ""; //ref originally
  available : LifecycleStartDurationInterval ""; //ref originally
@@ -185,13 +186,13 @@ otype AbstractComputeResource  -> AbstractComponent  "Abstract base class for co
  {
 }
 
-otype SimpleComputeCores  "The number of CPU cores requested by the user. The minimum represents the lower limit that the excution requires. The maximum represents the highest number of cores that the excution can use."
+dtype SimpleComputeCores  "The number of CPU cores requested by the user. The minimum represents the lower limit that the excution requires. The maximum represents the highest number of cores that the excution can use."
  {
  min : ivoa:integer ""; 
  max : ivoa:integer ""; 
 }
 
-otype SimpleComputeMemory  "The amount of memory requested by the user. The minimum represents the lower limit that the excution requires. The maximum represents the highest amount of memory that the excution can use. All values are given in multiples of 'GiB'."
+dtype SimpleComputeMemory  "The amount of memory requested by the user. The minimum represents the lower limit that the excution requires. The maximum represents the highest amount of memory that the excution can use. All values are given in multiples of 'GiB'."
  {
  min : ivoa:integer ""; 
  max : ivoa:integer ""; 
@@ -208,7 +209,7 @@ otype AbstractStorageResource  "Abstract base class for storage resources."
  {
 }
 
-otype SimpleStorageSize  "The size of storage requested. The minimum represents the minimum size the excution requires. The maximum represents the maximum size that the excution can use. All values are given in multiples of 'GiB'."
+dtype SimpleStorageSize  "The size of storage requested. The minimum represents the minimum size the excution requires. The maximum represents the maximum size that the excution can use. All values are given in multiples of 'GiB'."
  {
  min : ivoa:integer ""; 
  max : ivoa:integer ""; 
@@ -252,7 +253,7 @@ otype S3DataResource  -> AbstractDataResource  "A data resource in a S3 storage 
  object : ivoa:string "The target object name. Leaving this blank will mount the whole bucket as a directory."; 
 }
 
-otype RucioDataResourceBlock  "A reusable block describing a data resource in a Rucio storage system."
+dtype RucioDataResourceBlock  "A reusable block describing a data resource in a Rucio storage system."
  {
  endpoint : ivoa:string "The endpoint address of the Rucio service."; 
  scope : ivoa:string "The Rucio scope."; 
@@ -296,16 +297,16 @@ otype IvoaDataLinkItem  "A row of DataLink metadata about the resource."
 otype IvoaDataResourceBlock  "The IVOA metadata for the resource."
  {
  ivoid : ivoa:string "The IVOA data identifier (DID)."; 
- obscore : IvoaObsCoreItem "The ObsCore metadata about the resource."; //ref originally
- datalink : IvoaDataLinkItem "The DataLink metadata about the resource."; //ref originally
+ obscore : IvoaObsCoreItem as composition "The ObsCore metadata about the resource."; //ref originally
+ datalink : IvoaDataLinkItem as composition "The DataLink metadata about the resource."; //ref originally
 }
 
 otype IvoaDataResource  -> AbstractDataResource  "Metadata describing an IVOA data resource."
  {
- ivoa : IvoaDataResourceBlock ""; //ref originally
+ ivoa : IvoaDataResourceBlock as composition ""; //ref originally
 }
 
-otype SkaoChecksumItem  ""
+dtype SkaoChecksumItem  ""
  {
  type : ivoa:string ""; 
  value : ivoa:string ""; 
@@ -324,21 +325,21 @@ otype SkaoDataResourceBlock  "A reusable block describing the metadata for a SKA
  objecttype : ivoa:string "The data object type."; 
  datasize : ivoa:integer ""; 
  checksum : SkaoChecksumItem ""; //ref originally
- replicas  : SkaoReplicaItem @+ "A list of known replicas."; // ref originally
+ replicas  : SkaoReplicaItem @+ as composition  "A list of known replicas."; // ref originally
 }
 
 otype SkaoDataResource  -> IvoaDataResource  "Metadata describing a SKAO data resource in the data lake."
  {
- skao : SkaoDataResourceBlock ""; //ref originally
+ skao : SkaoDataResourceBlock as composition ""; //ref originally
 }
 
 otype ExecutionRequestComponents  "The combination of an executable and the compute, storage, volumes, and data resources it needs."
  {
- executable : AbstractExecutable ""; //ref originally
- compute : AbstractComputeResource ""; //ref originally
- storage : AbstractStorageResourceList ""; //ref originally
- volumes : AbstractVolumeMountList ""; //ref originally
- data : AbstractDataResourceList ""; //ref originally
+ executable : AbstractExecutable as composition  ""; //ref originally
+ compute : AbstractComputeResource as composition""; //ref originally
+ storage : AbstractStorageResourceList as composition ""; //ref originally
+ volumes : AbstractVolumeMountList as composition ""; //ref originally
+ data : AbstractDataResourceList as composition ""; //ref originally
 }
 
 otype RequestedScheduleItem  "The requested schedule."
@@ -349,12 +350,12 @@ otype RequestedScheduleItem  "The requested schedule."
 
 otype RequestedScheduleBlock  "The requested schedule."
  {
- requested : RequestedScheduleItem ""; //ref originally
+ requested : RequestedScheduleItem as composition ""; //ref originally
 }
 
 otype OfferSetRequest  -> ExecutionRequestComponents  "A request for a set of offers for an execution."
  {
- schedule : RequestedScheduleBlock ""; //ref originally
+ schedule : RequestedScheduleBlock as composition ""; //ref originally
 }
 
 otype AbstractExecutionSession  "Abstract base class for execution sessions."
@@ -379,11 +380,11 @@ CANCELLED ""
 
 otype SimpleExecutionComponents  "The combination of an executable and the compute, storage, volumes, and data resources it needs."
  {
- executable : AbstractExecutable ""; //ref originally
- compute : AbstractComputeResource ""; //ref originally
- storage : AbstractStorageResourceList ""; //ref originally
- volumes : AbstractVolumeMountList ""; //ref originally
- data : AbstractDataResourceList ""; //ref originally
+ executable : AbstractExecutable as composition ""; //ref originally
+ compute : AbstractComputeResource as composition ""; //ref originally
+ storage : AbstractStorageResourceList as composition ""; //ref originally
+ volumes : AbstractVolumeMountList as composition ""; //ref originally
+ data : AbstractDataResourceList as composition ""; //ref originally
 }
 
 otype SimpleSessionConnector  "A connector to interact with the session.
@@ -399,13 +400,13 @@ otype SimpleExecutionSession  "A simple execution session."
  {
 }
 
-otype ScheduleStartDurationInstant  "A schedule instant and duration."
+dtype ScheduleStartDurationInstant  "A schedule instant and duration."
  {
  start : ISO8601Instant ""; //ref originally
  duration : ISO8601Duration ""; //ref originally
 }
 
-otype ScheduleStartDurationInterval  "A schedule interval and duration."
+dtype ScheduleStartDurationInterval  "A schedule interval and duration."
  {
  start : ISO8601Interval ""; //ref originally
  duration : ISO8601Duration ""; //ref originally
@@ -420,14 +421,14 @@ otype ScheduledExecutionSchedule  "An Execution Session schedule."
 
 otype ScheduledExecutionSession  -> SimpleExecutionSession  "A scheduled execution session."
  {
- schedule : ScheduledExecutionSchedule ""; //ref originally
+ schedule : ScheduledExecutionSchedule as composition ""; //ref originally
 }
 
 otype OfferSetResponse  -> AbstractComponent  "A set of executions offered in response to a request, including a uuid, href, and an expiry date for the set."
  {
  result : ivoa:string "A flag to indicate whether the request can be handled by this service. If service is able to handle the request, then the `result` will be `YES` and the `offers` block should contain one or more offers. If service is not able to handle the request, the `result` will be `NO` and the `messages` block should contain one or more reasons explaining why."; 
  description : ivoa:string "A human readable description."; 
- offers  : AbstractExecutionSession @+ ""; // ref originally
+ offers  : AbstractExecutionSession @+ as composition ""; // ref originally
 }
 
 otype AbstractUpdate  "Abstract base class for updates. This includes the `type` discriminator and the target `path` to update."
