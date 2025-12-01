@@ -9,8 +9,11 @@ otype ExecutionSessionResponseFour  "Container class for ExecutionSession respon
  {
 }
 
-otype AbstractExecutable  -> AbstractComponent  "Abstract base class for executables."
+otype AbstractExecutable  -> AbstractComponent  "Abstract base class for executables." 
  {
+ 	
+ 	lifecycle: LifecycleComponent as composition "";// FIXME did have multiple inheritance
+ 	
 }
 
 dtype DockerPlatformSpec  "Details of the platform the container image is built for. Debatable whether we need to have this here. The information will be in the container, and the platform will probably need to check it anyway to make sure. So why have the duplicate information ?"
@@ -21,7 +24,7 @@ dtype DockerPlatformSpec  "Details of the platform the container image is built 
 
 otype DockerImageSpec  "Details of the container image."
  {
- locations : ivoa:string @+ "An array of repository locations. <repository>/<namespace>/<container>:<tag> e.g. ghcr.io/ivoa/oligia-webtop:ubuntu-2022.01.13";
+ locations : ivoa:string @+ "An array of repository locations. {repository}/{namespace}/{container}:{tag} e.g. ghcr.io/ivoa/oligia-webtop:ubuntu-2022.01.13";
  digest : ivoa:string "Images that use the v2 or later format have a content-addressable identifier called a digest. As long as the input used to generate the image is unchanged, the digest value is predictable. The digest is generated as a sha256 checksum when the image is built. The digest can be used to verify the contents of an image."; 
  platform : DockerPlatformSpec ""; //ref originally
 }
@@ -133,11 +136,12 @@ otype ComponentMetadata  "A metadata block for our components. This includes a n
  options  : AbstractOption @+ as composition "A List of options the client can apply to this component."; // ref originally
 }
 
-otype AbstractComponent  "Abstract base class for all our components."
+abstract otype AbstractComponent  "Abstract base class for all our components."
  {
  kind : ivoa:string "The component type identifier."; 
  meta : ComponentMetadata as composition "The component metadata."; //ref originally
 }
+
 
 enum LifecyclePhase "Lifecycle phase values." {
 INITIALIZING "",
@@ -176,13 +180,13 @@ dtype LifecycleSchedule  "Lifecycle schedule."
  releasing : LifecycleStartDurationInstant ""; //ref originally
 }
 
-otype LifecycleComponent  "A component with a lifecycle."
+abstract otype LifecycleComponent -> AbstractComponent  "A component with a lifecycle." //TODO originally was used in multiple inheritance
  {
  phase : LifecyclePhase "The lifecycle phase."; //ref originally
  schedule : LifecycleSchedule "The lifecycle schedule."; //ref originally
 }
 
-otype AbstractComputeResource  -> AbstractComponent  "Abstract base class for compute resources."
+abstract otype AbstractComputeResource  -> LifecycleComponent  "Abstract base class for compute resources."
  {
 }
 
@@ -205,7 +209,7 @@ otype SimpleComputeResource  -> AbstractComputeResource  "A simple compute resou
  volumes : ivoa:string @+ "A list of the filesystem volumes to mount.";
 }
 
-otype AbstractStorageResource  "Abstract base class for storage resources."
+abstract otype AbstractStorageResource -> LifecycleComponent "Abstract base class for storage resources."
  {
 }
 
@@ -220,7 +224,7 @@ otype SimpleStorageResource  -> AbstractStorageResource  "A simple storage resou
  size : SimpleStorageSize ""; //ref originally
 }
 
-otype AbstractVolumeMount  "Abstract base class for volume mounts."
+abstract otype AbstractVolumeMount ->AbstractComponent  "Abstract base class for volume mounts."
  {
 }
 
@@ -236,7 +240,7 @@ otype SimpleVolumeMount  -> AbstractVolumeMount  "A simple volume mount."
 ";
 }
 
-otype AbstractDataResource  "Abstract base class for data resources."
+abstract otype AbstractDataResource -> LifecycleComponent "Abstract base class for data resources."
  {
 }
 
@@ -337,9 +341,9 @@ otype ExecutionRequestComponents  "The combination of an executable and the comp
  {
  executable : AbstractExecutable as composition  ""; //ref originally
  compute : AbstractComputeResource as composition""; //ref originally
- storage : AbstractStorageResourceList as composition ""; //ref originally
- volumes : AbstractVolumeMountList as composition ""; //ref originally
- data : AbstractDataResourceList as composition ""; //ref originally
+ storage : AbstractStorageResource @+ as composition ""; //ref originally
+ volumes : AbstractVolumeMount @+ as composition ""; //ref originally
+ data : AbstractDataResource @+ as composition ""; //ref originally
 }
 
 otype RequestedScheduleItem  "The requested schedule."
@@ -382,9 +386,9 @@ otype SimpleExecutionComponents  "The combination of an executable and the compu
  {
  executable : AbstractExecutable as composition ""; //ref originally
  compute : AbstractComputeResource as composition ""; //ref originally
- storage : AbstractStorageResourceList as composition ""; //ref originally
- volumes : AbstractVolumeMountList as composition ""; //ref originally
- data : AbstractDataResourceList as composition ""; //ref originally
+ storage : AbstractStorageResource @+ as composition ""; //ref originally
+ volumes : AbstractVolumeMount @+ as composition ""; //ref originally
+ data : AbstractDataResource @+ as composition ""; //ref originally
 }
 
 otype SimpleSessionConnector  "A connector to interact with the session.
@@ -396,8 +400,13 @@ otype SimpleSessionConnector  "A connector to interact with the session.
  location : ivoa:string "The access connector URL."; 
 }
 
-otype SimpleExecutionSession  "A simple execution session."
+otype SimpleExecutionSession -> AbstractExecutionSession "A simple execution session." // TODO this might need more work
  {
+ 	phase: SimpleExecutionSessionPhase "";
+ 	expires: ivoa:datetime "The date and time when this offer expires. Only valid while the state is OFFERED";
+ 	components: SimpleExecutionComponents as composition "";
+ 	connectors: SimpleSessionConnector @+ as composition "A list of connectors to interact with the session.";
+ 	
 }
 
 dtype ScheduleStartDurationInstant  "A schedule instant and duration."
