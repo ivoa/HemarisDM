@@ -1,6 +1,6 @@
 site_name: ExecutionBroker Data Model Documentation
 docs_dir: doc/site
-repo_url: 'https://github.com/pahjbo/ExecutionBrokerDM'
+repo_url: 'https://github.com/ivoa/ExecutionBrokerDM'
 
 theme:
   name: material

@@ -1,9 +1,15 @@
 plugins {
     // this plugin provides all the vo-dml functionality
     id("net.ivoa.vo-dml.vodmltools") version "0.5.28"
- //   id("org.kordamp.gradle.jandex") version "1.1.0"
+    id("org.kordamp.gradle.jandex") version "1.1.0"
     id("com.diffplug.spotless") version "6.25.0"
+    `maven-publish`
+    id("io.github.gradle-nexus.publish-plugin") version "1.3.0"
+
 }
+
+group = "net.ivoa.dm"
+version = "0.9-SNAPSHOT"
 
 vodml {
     vodmlDir.set(file("vo-dml"))
@@ -32,7 +38,7 @@ tasks.test {
 dependencies {
     //all data models will want to depend on the base model at least
 
-    api("org.javastro.ivoa.vo-dml:ivoa-base:1.0-SNAPSHOT") //use API if model exposes any of these base types in API
+    api("net.ivoa.vo-dml:ivoa-base:1.0-SNAPSHOT") //use API if model exposes any of these base types in API
 
     // the dependencies below are related to testing
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.2")
@@ -86,6 +92,13 @@ java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(17))
     }
+    withJavadocJar()
+    withSourcesJar()
+
+}
+//make the fact that sources are generated explicit (gets rid of warning that it will not work in gradle 8)- see https://melix.github.io/blog/2021/10/gradle-quickie-dependson.html
+tasks.named<Jar>("sourcesJar") {
+    from(tasks.named("vodmlGenerateJava"))
 }
 
 // use Spotless to reformat the generated code nicely.
@@ -95,5 +108,53 @@ spotless {
             PatternSet().include("**/*.java")
         ))
         googleJavaFormat("1.17.0")
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
+            pom {
+                name.set("Execution Broker data model")
+                description.set("A model for organising execution in a distributed system")
+                url.set("https://github.com/ivoa/ExecutionBrokerDM")
+                licenses {
+                    license {
+                        name.set("GNU General Public License v3.0")
+                        url.set("https://www.gnu.org/licenses/gpl-3.0.html")
+                    }
+                }
+                developers {
+                    developer {
+                        id.set("Zarquan")
+                        name.set("Dave Morris")
+                        email.set("dave.morris@manchester.ac.uk")
+                    }
+                    developer {
+                        id.set("pahjbo")
+                        name.set("Paul Harrison")
+                        email.set("paul.harrison@manchester.ac.uk")
+                    }
+                }
+                scm {
+                    connection.set("scm:git:git://github.com/ivoa/ExecutionBrokerDM.git")
+                    developerConnection.set("scm:git:ssh://github.com/ivoa/ExecutionBrokerDM.git")
+                    url.set("https://github.com/ivoa/ExecutionBrokerDM")
+                }
+            }
+        }
+    }
+    repositories {
+        // TODO really want to publish to a repo run by the IVOA
+        maven {
+            name = "uksrcrepo"
+            url = uri("https://repo.dev.uksrc.org/repository/maven-snapshots/")
+            credentials {
+                username = (findProperty("uksrcNexusUsername") ?: System.getenv("UKSRC_REPO_USERNAME")) as String?
+                password = (findProperty("uksrcNexusPassword") ?: System.getenv("UKSRC_REPO_PASSWORD")) as String?
+            }
+        }
+
     }
 }
