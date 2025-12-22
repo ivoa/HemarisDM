@@ -9,7 +9,7 @@
       <title></title>
       <author>Dave Morris</author>
       <version>1.0</version>
-      <lastModified>2025-12-01T11:13:20Z</lastModified>
+      <lastModified>2025-12-22T12:32:00Z</lastModified>
       <import>
         <name>ivoa</name>
         <version>1.0</version>
@@ -1582,8 +1582,8 @@
                <name>IvoaDataLinkItem</name>
                <description>A row of DataLink metadata about the resource.</description>	    
                <attribute>
-                 <vodml-id>IvoaDataLinkItem.ID</vodml-id>
-                 <name>ID</name>
+                 <vodml-id>IvoaDataLinkItem.LinkID</vodml-id>
+                 <name>LinkID</name>
                  <description></description>	    
                  <datatype>
                     <vodml-ref>ivoa:string</vodml-ref>

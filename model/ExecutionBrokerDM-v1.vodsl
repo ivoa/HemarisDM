@@ -284,8 +284,8 @@ otype IvoaObsCoreItem  "A row of ObsCore metadata about the resource."
 
 otype IvoaDataLinkItem  "A row of DataLink metadata about the resource."
  {
- ID : ivoa:string ""; 
- access_url : ivoa:string ""; 
+ LinkID : ivoa:string ""; // FIXME is this ID intended to be the link ID - or was it just the surrogate key?
+ access_url : ivoa:string "";
  service_def : ivoa:string ""; 
  error_message : ivoa:string ""; 
  description : ivoa:string ""; 
