@@ -9,7 +9,7 @@
       <title></title>
       <author>Dave Morris</author>
       <version>1.0</version>
-      <lastModified>2025-12-22T12:32:00Z</lastModified>
+      <lastModified>2026-01-15T16:58:11Z</lastModified>
       <import>
         <name>ivoa</name>
         <version>1.0</version>
@@ -829,7 +829,7 @@
                <attribute>
                  <vodml-id>MessageItem.kind</vodml-id>
                  <name>kind</name>
-                 <description>The message type identifier. Typically a URL pointing to a human readable description of the message.
+                 <description>The message type identifier. Typically a URL pointing to a human readable description of the message. 
                  </description>	    
                  <datatype>
                     <vodml-ref>ivoa:string</vodml-ref>
@@ -909,18 +909,6 @@
                <vodml-id>AbstractOption</vodml-id>
                <name>AbstractOption</name>
                <description>Abstract base class for describing options. This includes the `type` discriminator and the target `path` to update.</description>	    
-               <attribute>
-                 <vodml-id>AbstractOption.kind</vodml-id>
-                 <name>kind</name>
-                 <description>The kind of option.</description>	    
-                 <datatype>
-                    <vodml-ref>ivoa:string</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>1</minOccurs>
-                   <maxOccurs>1</maxOccurs>
-                 </multiplicity>
-               </attribute>
                <attribute>
                  <vodml-id>AbstractOption.path</vodml-id>
                  <name>path</name>
@@ -1074,7 +1062,7 @@
                     <vodml-ref>ivoa:string</vodml-ref>
                  </datatype>
                  <multiplicity>
-                   <minOccurs>1</minOccurs>
+                   <minOccurs>0</minOccurs>
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
                </attribute>
@@ -1086,7 +1074,7 @@
                     <vodml-ref>ivoa:string</vodml-ref>
                  </datatype>
                  <multiplicity>
-                   <minOccurs>1</minOccurs>
+                   <minOccurs>0</minOccurs>
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
                </attribute>
@@ -1098,7 +1086,7 @@
                     <vodml-ref>ivoa:string</vodml-ref>
                  </datatype>
                  <multiplicity>
-                   <minOccurs>1</minOccurs>
+                   <minOccurs>0</minOccurs>
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
                </attribute>
@@ -1110,7 +1098,7 @@
                     <vodml-ref>ivoa:string</vodml-ref>
                  </datatype>
                  <multiplicity>
-                   <minOccurs>1</minOccurs>
+                   <minOccurs>0</minOccurs>
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
                </attribute>
@@ -1122,7 +1110,7 @@
                     <vodml-ref>ivoa:string</vodml-ref>
                  </datatype>
                  <multiplicity>
-                   <minOccurs>1</minOccurs>
+                   <minOccurs>0</minOccurs>
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
                </attribute>
@@ -1134,7 +1122,7 @@
                     <vodml-ref>ivoa:string</vodml-ref>
                  </datatype>
                  <multiplicity>
-                   <minOccurs>1</minOccurs>
+                   <minOccurs>0</minOccurs>
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
                </attribute>
@@ -1146,7 +1134,7 @@
                     <vodml-ref>execbroker:MessageItem</vodml-ref>
                  </datatype>
                  <multiplicity>
-                   <minOccurs>1</minOccurs>
+                   <minOccurs>0</minOccurs>
                    <maxOccurs>-1</maxOccurs>
                  </multiplicity>
                </composition>
@@ -1158,7 +1146,7 @@
                     <vodml-ref>execbroker:AbstractOption</vodml-ref>
                  </datatype>
                  <multiplicity>
-                   <minOccurs>1</minOccurs>
+                   <minOccurs>0</minOccurs>
                    <maxOccurs>-1</maxOccurs>
                  </multiplicity>
                </composition>
@@ -1167,18 +1155,6 @@
                <vodml-id>AbstractComponent</vodml-id>
                <name>AbstractComponent</name>
                <description>Abstract base class for all our components.</description>	    
-               <attribute>
-                 <vodml-id>AbstractComponent.kind</vodml-id>
-                 <name>kind</name>
-                 <description>The component type identifier.</description>	    
-                 <datatype>
-                    <vodml-ref>ivoa:string</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>1</minOccurs>
-                   <maxOccurs>1</maxOccurs>
-                 </multiplicity>
-               </attribute>
                <composition>
                  <vodml-id>AbstractComponent.meta</vodml-id>
                  <name>meta</name>
@@ -2333,18 +2309,6 @@
                <vodml-id>AbstractUpdate</vodml-id>
                <name>AbstractUpdate</name>
                <description>Abstract base class for updates. This includes the `type` discriminator and the target `path` to update.</description>	    
-               <attribute>
-                 <vodml-id>AbstractUpdate.kind</vodml-id>
-                 <name>kind</name>
-                 <description>The kind of update.</description>	    
-                 <datatype>
-                    <vodml-ref>ivoa:string</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>1</minOccurs>
-                   <maxOccurs>1</maxOccurs>
-                 </multiplicity>
-               </attribute>
                <attribute>
                  <vodml-id>AbstractUpdate.path</vodml-id>
                  <name>path</name>

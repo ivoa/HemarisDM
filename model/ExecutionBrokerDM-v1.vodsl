@@ -12,7 +12,7 @@ otype ExecutionSessionResponseFour  "Container class for ExecutionSession respon
 otype AbstractExecutable  -> AbstractComponent  "Abstract base class for executables." 
  {
  	
- 	lifecycle: LifecycleComponent as composition "";// FIXME did have multiple inheritance
+ 	lifecycle: LifecycleComponent as composition "";// FIXME did have multiple inheritance - does this matter?
  	
 }
 
@@ -80,7 +80,8 @@ otype JupyterNotebook  -> AbstractExecutable  "Details for a Jupyter notebook ex
 
 otype MessageItem  "A log message based on the Message Templates standard. https://messagetemplates.org/"
  {
- kind : ivoa:string "The message type identifier. Typically a URL pointing to a human readable description of the message.
+ 	// IMPL this kind is not being a type discriminator?
+ kind : ivoa:string "The message type identifier. Typically a URL pointing to a human readable description of the message. 
 "; 
  time : ivoa:string "The date and time of the message.
 "; 
@@ -96,7 +97,6 @@ otype MessageItem  "A log message based on the Message Templates standard. https
 
 otype AbstractOption  "Abstract base class for describing options. This includes the `type` discriminator and the target `path` to update."
  {
- kind : ivoa:string "The kind of option."; 
  path : ivoa:string "The path this option applies to."; 
 }
 
@@ -126,19 +126,18 @@ otype IntegerDeltaOption  -> AbstractOption  "A simple integer delta option. Thi
 
 otype ComponentMetadata  "A metadata block for our components. This includes a name, a UUID identifier, a URL, and lists of the messages and options."
  {
- uuid : ivoa:string "A machine readable UUID, assigned when a component is created in a service."; 
- name : ivoa:string "A human readable name, assigned by the client."; 
- url : ivoa:string "The URL to access this component."; 
- description : ivoa:string "A human readable description."; 
- created : ivoa:string "The date and time the component was created."; 
- modified : ivoa:string "The date and time the component was last modified."; 
- messages  : MessageItem @+ as composition "A list of messages about this component."; // ref originally
- options  : AbstractOption @+ as composition "A List of options the client can apply to this component."; // ref originally
+ uuid : ivoa:string @? "A machine readable UUID, assigned when a component is created in a service."; 
+ name : ivoa:string @? "A human readable name, assigned by the client."; 
+ url : ivoa:string @? "The URL to access this component."; 
+ description : ivoa:string @? "A human readable description."; 
+ created : ivoa:string @? "The date and time the component was created."; 
+ modified : ivoa:string @? "The date and time the component was last modified."; 
+ messages  : MessageItem @* as composition "A list of messages about this component."; // ref originally
+ options  : AbstractOption @* as composition "A List of options the client can apply to this component."; // ref originally
 }
 
 abstract otype AbstractComponent  "Abstract base class for all our components."
  {
- kind : ivoa:string "The component type identifier."; 
  meta : ComponentMetadata as composition "The component metadata."; //ref originally
 }
 
@@ -394,6 +393,7 @@ otype SimpleExecutionComponents  "The combination of an executable and the compu
 otype SimpleSessionConnector  "A connector to interact with the session.
 "
  {
+ 	//IMPL this kind is not a type discriminator?
  kind : ivoa:string "A URI to identify the type of connector."; 
  status : ivoa:string "A flag to indicate the staus of the access method."; 
  protocol : ivoa:string "The access protocol, provided by the server when an offer is made. Typically one of [TCP, HTTP, HTTPS]."; 
@@ -442,7 +442,6 @@ otype OfferSetResponse  -> AbstractComponent  "A set of executions offered in re
 
 otype AbstractUpdate  "Abstract base class for updates. This includes the `type` discriminator and the target `path` to update."
  {
- kind : ivoa:string "The kind of update."; 
  path : ivoa:string "The path this update applies to."; 
 }
 
