@@ -9,7 +9,7 @@
       <title></title>
       <author>Dave Morris</author>
       <version>1.0</version>
-      <lastModified>2026-01-15T16:58:11Z</lastModified>
+      <lastModified>2026-01-20T14:45:06Z</lastModified>
       <import>
         <name>ivoa</name>
         <version>1.0</version>
@@ -193,6 +193,30 @@
               <vodml-id>NameValueMap</vodml-id>
               <name>NameValueMap</name>
               <description>A map of name->value properties. See https://swagger.io/docs/specification/data-models/dictionaries/</description>	    
+            <attribute>
+              <vodml-id>NameValueMap.key</vodml-id>
+              <name>key</name>
+              <description>The key</description>	    
+              <datatype>
+                 <vodml-ref>ivoa:string</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>NameValueMap.value</vodml-id>
+              <name>value</name>
+              <description>The value</description>	    
+              <datatype>
+                 <vodml-ref>ivoa:string</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
             </dataType>
             <dataType>
               <vodml-id>DockerInternalPort</vodml-id>
@@ -765,8 +789,8 @@
                     <vodml-ref>execbroker:NameValueMap</vodml-ref>
                  </datatype>
                  <multiplicity>
-                   <minOccurs>1</minOccurs>
-                   <maxOccurs>1</maxOccurs>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
                  </multiplicity>
                </attribute>
                <composition>
@@ -887,8 +911,8 @@
                     <vodml-ref>execbroker:NameValueMap</vodml-ref>
                  </datatype>
                  <multiplicity>
-                   <minOccurs>1</minOccurs>
-                   <maxOccurs>1</maxOccurs>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
                  </multiplicity>
                </attribute>
                <attribute>

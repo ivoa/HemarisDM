@@ -29,9 +29,13 @@ otype DockerImageSpec  "Details of the container image."
  platform : DockerPlatformSpec ""; //ref originally
 }
 
+//FIXME this is probably not the best name for this
 dtype NameValueMap  "A map of name->value properties. See https://swagger.io/docs/specification/data-models/dictionaries/"
  {
- 	//FIXME what is this actually doing
+ 	
+ 	key: ivoa:string "The key";
+ 	value: ivoa:string "The value";
+ 	
 }
 
 dtype DockerInternalPort  "Details of an internal network port on a container."
@@ -64,7 +68,7 @@ otype DockerContainer  -> AbstractExecutable  "Details for a Docker or OCI conta
  image : DockerImageSpec as composition "Details of the container image."; //ref originally
  privileged : ivoa:boolean "Set the privileged flag on execution. The default is `false`. See https://docs.docker.com/reference/cli/docker/container/run/#privileged."; 
  entrypoint : ivoa:string "Overwrite the default ENTRYPOINT of the image."; 
- environment : NameValueMap "A name => value map of environment variables to pass to the container."; //ref originally
+ environment : NameValueMap @* "A name => value map of environment variables to pass to the container."; //ref originally
  network : DockerNetworkSpec as composition "Details of the network access available to the container."; //ref originally
 }
 
@@ -89,7 +93,7 @@ otype MessageItem  "A log message based on the Message Templates standard. https
 "; 
  template : ivoa:string "The message template.
 "; 
- values : NameValueMap "A map of name->value properties.
+ values : NameValueMap @* "A map of name->value properties.
 "; //ref originally
  message : ivoa:string "The resulting message.
 "; 
@@ -366,6 +370,7 @@ otype AbstractExecutionSession  "Abstract base class for execution sessions."
 }
 
 enum SimpleExecutionSessionPhase "The Execution Session phase." {
+	//TODO fill in descriptions - note this is not possible in OpenAPI for enumerations
 INITIAL "",
 OFFERED "",
 ACCEPTED "",
