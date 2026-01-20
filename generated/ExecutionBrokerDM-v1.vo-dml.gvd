@@ -1,0 +1,442 @@
+
+digraph GVmap {  
+	label = "\n\nexecbroker data model"
+	rankdir=TB
+	
+	node [ 
+	  shape=tab
+	  style=filled
+	]
+	subgraph cluster_packages {
+	  label="Model"
+	  rankdir=TB
+      style=filled
+      fillcolor="/set312/1"
+	  
+	}
+	
+	node [
+	shape=record
+	fontsize=8
+	style=filled] 
+    
+  "ivoa:string" [
+    URL="not known#string"
+    label = "{ivoa:string}"
+    fillcolor="grey"
+    ] ;
+      
+    "execbroker:ISO8601Instant"[
+    URL="../execbroker/ISO8601Instant"
+    label = "{&lt;&lt;primitive type&gt;&gt;\nISO8601Instant}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:ISO8601Duration"[
+    URL="../execbroker/ISO8601Duration"
+    label = "{&lt;&lt;primitive type&gt;&gt;\nISO8601Duration}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:ISO8601Interval"[
+    URL="../execbroker/ISO8601Interval"
+    label = "{&lt;&lt;primitive type&gt;&gt;\nISO8601Interval}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:LifecyclePhase" [
+    URL="../execbroker/LifecyclePhase"
+    label = "{&lt;&lt;enumeration&gt;&gt;\nLifecyclePhase|+INITIALIZING\l+WAITING\l+PREPARING\l+AVAILABLE\l+RUNNING\l+RELEASING\l+COMPLETED\l+FAILED\l+CANCELLED\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:SimpleExecutionSessionPhase" [
+    URL="../execbroker/SimpleExecutionSessionPhase"
+    label = "{&lt;&lt;enumeration&gt;&gt;\nSimpleExecutionSessionPhase|+INITIAL\l+OFFERED\l+ACCEPTED\l+REJECTED\l+EXPIRED\l+WAITING\l+PREPARING\l+AVAILABLE\l+RUNNING\l+RELEASING\l+COMPLETED\l+FAILED\l+CANCELLED\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:DockerPlatformSpec" [
+    URL="../execbroker/DockerPlatformSpec"
+    label = "{&lt;&lt;datatype&gt;&gt;\nDockerPlatformSpec|+architecture : ivoa:string\l+os : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:NameValueMap" [
+    URL="../execbroker/NameValueMap"
+    label = "{&lt;&lt;datatype&gt;&gt;\nNameValueMap|+key : ivoa:string\l+value : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:DockerInternalPort" [
+    URL="../execbroker/DockerInternalPort"
+    label = "{&lt;&lt;datatype&gt;&gt;\nDockerInternalPort|+port : ivoa:integer\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:DockerExternalPort" [
+    URL="../execbroker/DockerExternalPort"
+    label = "{&lt;&lt;datatype&gt;&gt;\nDockerExternalPort|+port : ivoa:integer\l+addresses : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:LifecycleStartDurationInstant" [
+    URL="../execbroker/LifecycleStartDurationInstant"
+    label = "{&lt;&lt;datatype&gt;&gt;\nLifecycleStartDurationInstant|+start : execbroker:ISO8601Instant\l+duration : execbroker:ISO8601Duration\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:LifecycleStartDurationInterval" [
+    URL="../execbroker/LifecycleStartDurationInterval"
+    label = "{&lt;&lt;datatype&gt;&gt;\nLifecycleStartDurationInterval|+start : execbroker:ISO8601Interval\l+duration : execbroker:ISO8601Duration\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:LifecycleSchedule" [
+    URL="../execbroker/LifecycleSchedule"
+    label = "{&lt;&lt;datatype&gt;&gt;\nLifecycleSchedule|+preparing : execbroker:LifecycleStartDurationInstant\l+available : execbroker:LifecycleStartDurationInterval\l+releasing : execbroker:LifecycleStartDurationInstant\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:SimpleComputeCores" [
+    URL="../execbroker/SimpleComputeCores"
+    label = "{&lt;&lt;datatype&gt;&gt;\nSimpleComputeCores|+min : ivoa:integer\l+max : ivoa:integer\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:SimpleComputeMemory" [
+    URL="../execbroker/SimpleComputeMemory"
+    label = "{&lt;&lt;datatype&gt;&gt;\nSimpleComputeMemory|+min : ivoa:integer\l+max : ivoa:integer\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:SimpleStorageSize" [
+    URL="../execbroker/SimpleStorageSize"
+    label = "{&lt;&lt;datatype&gt;&gt;\nSimpleStorageSize|+min : ivoa:integer\l+max : ivoa:integer\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:RucioDataResourceBlock" [
+    URL="../execbroker/RucioDataResourceBlock"
+    label = "{&lt;&lt;datatype&gt;&gt;\nRucioDataResourceBlock|+endpoint : ivoa:string\l+scope : ivoa:string\l+object : ivoa:string\l+type : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:SkaoChecksumItem" [
+    URL="../execbroker/SkaoChecksumItem"
+    label = "{&lt;&lt;datatype&gt;&gt;\nSkaoChecksumItem|+type : ivoa:string\l+value : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:ScheduleStartDurationInstant" [
+    URL="../execbroker/ScheduleStartDurationInstant"
+    label = "{&lt;&lt;datatype&gt;&gt;\nScheduleStartDurationInstant|+start : execbroker:ISO8601Instant\l+duration : execbroker:ISO8601Duration\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:ScheduleStartDurationInterval" [
+    URL="../execbroker/ScheduleStartDurationInterval"
+    label = "{&lt;&lt;datatype&gt;&gt;\nScheduleStartDurationInterval|+start : execbroker:ISO8601Interval\l+duration : execbroker:ISO8601Duration\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:ExecutionSessionResponseFour" [
+    URL="../execbroker/ExecutionSessionResponseFour"
+    label = "{ExecutionSessionResponseFour}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:AbstractExecutable" [
+    URL="../execbroker/AbstractExecutable"
+    label = "{AbstractExecutable}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:DockerImageSpec" [
+    URL="../execbroker/DockerImageSpec"
+    label = "{DockerImageSpec|+locations : ivoa:string\l+digest : ivoa:string\l+platform : execbroker:DockerPlatformSpec\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:DockerNetworkPort" [
+    URL="../execbroker/DockerNetworkPort"
+    label = "{DockerNetworkPort|+access : ivoa:boolean\l+internal : execbroker:DockerInternalPort\l+external : execbroker:DockerExternalPort\l+protocol : ivoa:string\l+path : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:DockerNetworkSpec" [
+    URL="../execbroker/DockerNetworkSpec"
+    label = "{DockerNetworkSpec}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:DockerContainer" [
+    URL="../execbroker/DockerContainer"
+    label = "{DockerContainer|+privileged : ivoa:boolean\l+entrypoint : ivoa:string\l+environment : execbroker:NameValueMap\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:SingularityContainer" [
+    URL="../execbroker/SingularityContainer"
+    label = "{SingularityContainer|+location : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:JupyterNotebook" [
+    URL="../execbroker/JupyterNotebook"
+    label = "{JupyterNotebook|+location : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:MessageItem" [
+    URL="../execbroker/MessageItem"
+    label = "{MessageItem|+kind : ivoa:string\l+time : ivoa:string\l+level : ivoa:string\l+template : ivoa:string\l+values : execbroker:NameValueMap\l+message : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:AbstractOption" [
+    URL="../execbroker/AbstractOption"
+    label = "{AbstractOption|+path : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:StringValueOption" [
+    URL="../execbroker/StringValueOption"
+    label = "{StringValueOption|+pattern : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:EnumValueOption" [
+    URL="../execbroker/EnumValueOption"
+    label = "{EnumValueOption|+values : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:IntegerValueOption" [
+    URL="../execbroker/IntegerValueOption"
+    label = "{IntegerValueOption|+min : ivoa:integer\l+max : ivoa:integer\l+units : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:IntegerDeltaOption" [
+    URL="../execbroker/IntegerDeltaOption"
+    label = "{IntegerDeltaOption|+min : ivoa:integer\l+max : ivoa:integer\l+units : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:ComponentMetadata" [
+    URL="../execbroker/ComponentMetadata"
+    label = "{ComponentMetadata|+uuid : ivoa:string\l+name : ivoa:string\l+url : ivoa:string\l+description : ivoa:string\l+created : ivoa:string\l+modified : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:AbstractComponent" [
+    URL="../execbroker/AbstractComponent"
+    label = "{AbstractComponent}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:LifecycleComponent" [
+    URL="../execbroker/LifecycleComponent"
+    label = "{LifecycleComponent|+phase : execbroker:LifecyclePhase\l+schedule : execbroker:LifecycleSchedule\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:AbstractComputeResource" [
+    URL="../execbroker/AbstractComputeResource"
+    label = "{AbstractComputeResource}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:SimpleComputeResource" [
+    URL="../execbroker/SimpleComputeResource"
+    label = "{SimpleComputeResource|+cores : execbroker:SimpleComputeCores\l+memory : execbroker:SimpleComputeMemory\l+volumes : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:AbstractStorageResource" [
+    URL="../execbroker/AbstractStorageResource"
+    label = "{AbstractStorageResource}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:SimpleStorageResource" [
+    URL="../execbroker/SimpleStorageResource"
+    label = "{SimpleStorageResource|+size : execbroker:SimpleStorageSize\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:AbstractVolumeMount" [
+    URL="../execbroker/AbstractVolumeMount"
+    label = "{AbstractVolumeMount}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:SimpleVolumeMount" [
+    URL="../execbroker/SimpleVolumeMount"
+    label = "{SimpleVolumeMount|+path : ivoa:string\l+mode : ivoa:string\l+cardinality : ivoa:string\l+resources : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:AbstractDataResource" [
+    URL="../execbroker/AbstractDataResource"
+    label = "{AbstractDataResource}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:SimpleDataResource" [
+    URL="../execbroker/SimpleDataResource"
+    label = "{SimpleDataResource|+location : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:S3DataResource" [
+    URL="../execbroker/S3DataResource"
+    label = "{S3DataResource|+endpoint : ivoa:string\l+template : ivoa:string\l+bucket : ivoa:string\l+object : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:RucioDataResource" [
+    URL="../execbroker/RucioDataResource"
+    label = "{RucioDataResource|+rucio : execbroker:RucioDataResourceBlock\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:IvoaObsCoreItem" [
+    URL="../execbroker/IvoaObsCoreItem"
+    label = "{IvoaObsCoreItem|+obs_id : ivoa:string\l+obs_collection : ivoa:string\l+obs_publisher_did : ivoa:string\l+obs_creator_did : ivoa:string\l+dataproduct_type : ivoa:string\l+calib_level : ivoa:integer\l+access_url : ivoa:string\l+access_format : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:IvoaDataLinkItem" [
+    URL="../execbroker/IvoaDataLinkItem"
+    label = "{IvoaDataLinkItem|+LinkID : ivoa:string\l+access_url : ivoa:string\l+service_def : ivoa:string\l+error_message : ivoa:string\l+description : ivoa:string\l+semantics : ivoa:string\l+content_type : ivoa:string\l+content_length : ivoa:integer\l+content_qualifier : ivoa:string\l+local_semantics : ivoa:string\l+link_auth : ivoa:string\l+link_authorized : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:IvoaDataResourceBlock" [
+    URL="../execbroker/IvoaDataResourceBlock"
+    label = "{IvoaDataResourceBlock|+ivoid : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:IvoaDataResource" [
+    URL="../execbroker/IvoaDataResource"
+    label = "{IvoaDataResource}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:SkaoReplicaItem" [
+    URL="../execbroker/SkaoReplicaItem"
+    label = "{SkaoReplicaItem|+rsename : ivoa:string\l+dataurl : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:SkaoDataResourceBlock" [
+    URL="../execbroker/SkaoDataResourceBlock"
+    label = "{SkaoDataResourceBlock|+namespace : ivoa:string\l+objectname : ivoa:string\l+objecttype : ivoa:string\l+datasize : ivoa:integer\l+checksum : execbroker:SkaoChecksumItem\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:SkaoDataResource" [
+    URL="../execbroker/SkaoDataResource"
+    label = "{SkaoDataResource}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:ExecutionRequestComponents" [
+    URL="../execbroker/ExecutionRequestComponents"
+    label = "{ExecutionRequestComponents}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:RequestedScheduleItem" [
+    URL="../execbroker/RequestedScheduleItem"
+    label = "{RequestedScheduleItem|+duration : execbroker:ISO8601Duration\l+start : execbroker:ISO8601Interval\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:RequestedScheduleBlock" [
+    URL="../execbroker/RequestedScheduleBlock"
+    label = "{RequestedScheduleBlock}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:OfferSetRequest" [
+    URL="../execbroker/OfferSetRequest"
+    label = "{OfferSetRequest}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:AbstractExecutionSession" [
+    URL="../execbroker/AbstractExecutionSession"
+    label = "{AbstractExecutionSession}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:SimpleExecutionComponents" [
+    URL="../execbroker/SimpleExecutionComponents"
+    label = "{SimpleExecutionComponents}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:SimpleSessionConnector" [
+    URL="../execbroker/SimpleSessionConnector"
+    label = "{SimpleSessionConnector|+kind : ivoa:string\l+status : ivoa:string\l+protocol : ivoa:string\l+location : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:SimpleExecutionSession" [
+    URL="../execbroker/SimpleExecutionSession"
+    label = "{SimpleExecutionSession|+phase : execbroker:SimpleExecutionSessionPhase\l+expires : ivoa:datetime\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:ScheduledExecutionSchedule" [
+    URL="../execbroker/ScheduledExecutionSchedule"
+    label = "{ScheduledExecutionSchedule|+preparing : execbroker:ScheduleStartDurationInstant\l+available : execbroker:ScheduleStartDurationInterval\l+releasing : execbroker:ScheduleStartDurationInstant\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:ScheduledExecutionSession" [
+    URL="../execbroker/ScheduledExecutionSession"
+    label = "{ScheduledExecutionSession}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:OfferSetResponse" [
+    URL="../execbroker/OfferSetResponse"
+    label = "{OfferSetResponse|+result : ivoa:string\l+description : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:AbstractUpdate" [
+    URL="../execbroker/AbstractUpdate"
+    label = "{AbstractUpdate|+path : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:StringValueUpdate" [
+    URL="../execbroker/StringValueUpdate"
+    label = "{StringValueUpdate|+value : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:EnumValueUpdate" [
+    URL="../execbroker/EnumValueUpdate"
+    label = "{EnumValueUpdate|+value : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:IntegerValueUpdate" [
+    URL="../execbroker/IntegerValueUpdate"
+    label = "{IntegerValueUpdate|+value : ivoa:integer\l+units : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "execbroker:IntegerDeltaUpdate" [
+    URL="../execbroker/IntegerDeltaUpdate"
+    label = "{IntegerDeltaUpdate|+delta : ivoa:integer\l+units : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  
+ 
+    edge [color="red", arrowtail="none", arrowhead="empty"]
+    "execbroker:ISO8601Instant" -> "ivoa:string" ;
+  "execbroker:ISO8601Duration" -> "ivoa:string" ;
+  "execbroker:ISO8601Interval" -> "ivoa:string" ;
+  "execbroker:AbstractExecutable" -> "execbroker:AbstractComponent" ;
+  "execbroker:DockerContainer" -> "execbroker:AbstractExecutable" ;
+  "execbroker:SingularityContainer" -> "execbroker:AbstractExecutable" ;
+  "execbroker:JupyterNotebook" -> "execbroker:AbstractExecutable" ;
+  "execbroker:StringValueOption" -> "execbroker:AbstractOption" ;
+  "execbroker:EnumValueOption" -> "execbroker:AbstractOption" ;
+  "execbroker:IntegerValueOption" -> "execbroker:AbstractOption" ;
+  "execbroker:IntegerDeltaOption" -> "execbroker:AbstractOption" ;
+  "execbroker:LifecycleComponent" -> "execbroker:AbstractComponent" ;
+  "execbroker:AbstractComputeResource" -> "execbroker:LifecycleComponent" ;
+  "execbroker:SimpleComputeResource" -> "execbroker:AbstractComputeResource" ;
+  "execbroker:AbstractStorageResource" -> "execbroker:LifecycleComponent" ;
+  "execbroker:SimpleStorageResource" -> "execbroker:AbstractStorageResource" ;
+  "execbroker:AbstractVolumeMount" -> "execbroker:AbstractComponent" ;
+  "execbroker:SimpleVolumeMount" -> "execbroker:AbstractVolumeMount" ;
+  "execbroker:AbstractDataResource" -> "execbroker:LifecycleComponent" ;
+  "execbroker:SimpleDataResource" -> "execbroker:AbstractDataResource" ;
+  "execbroker:S3DataResource" -> "execbroker:AbstractDataResource" ;
+  "execbroker:RucioDataResource" -> "execbroker:AbstractDataResource" ;
+  "execbroker:IvoaDataResource" -> "execbroker:AbstractDataResource" ;
+  "execbroker:SkaoDataResource" -> "execbroker:IvoaDataResource" ;
+  "execbroker:OfferSetRequest" -> "execbroker:ExecutionRequestComponents" ;
+  "execbroker:SimpleExecutionSession" -> "execbroker:AbstractExecutionSession" ;
+  "execbroker:ScheduledExecutionSession" -> "execbroker:SimpleExecutionSession" ;
+  "execbroker:OfferSetResponse" -> "execbroker:AbstractComponent" ;
+  "execbroker:StringValueUpdate" -> "execbroker:AbstractUpdate" ;
+  "execbroker:EnumValueUpdate" -> "execbroker:AbstractUpdate" ;
+  "execbroker:IntegerValueUpdate" -> "execbroker:AbstractUpdate" ;
+  "execbroker:IntegerDeltaUpdate" -> "execbroker:AbstractUpdate" ;
+  
+ 
+    edge [color="blue", arrowhead="open", arrowtail="diamond",dir="both",fontsize="10"]
+    "execbroker:AbstractExecutable" -> "execbroker:LifecycleComponent" [headlabel="1",label="lifecycle",labelfontsize=10] ;
+  "execbroker:DockerNetworkSpec" -> "execbroker:DockerNetworkPort" [headlabel="1..*",label="ports",labelfontsize=10] ;
+  "execbroker:DockerContainer" -> "execbroker:DockerImageSpec" [headlabel="1",label="image",labelfontsize=10] ;
+  "execbroker:DockerContainer" -> "execbroker:DockerNetworkSpec" [headlabel="1",label="network",labelfontsize=10] ;
+  "execbroker:ComponentMetadata" -> "execbroker:MessageItem" [headlabel="0..*",label="messages",labelfontsize=10] ;
+  "execbroker:ComponentMetadata" -> "execbroker:AbstractOption" [headlabel="0..*",label="options",labelfontsize=10] ;
+  "execbroker:AbstractComponent" -> "execbroker:ComponentMetadata" [headlabel="1",label="meta",labelfontsize=10] ;
+  "execbroker:IvoaDataResourceBlock" -> "execbroker:IvoaObsCoreItem" [headlabel="1",label="obscore",labelfontsize=10] ;
+  "execbroker:IvoaDataResourceBlock" -> "execbroker:IvoaDataLinkItem" [headlabel="1",label="datalink",labelfontsize=10] ;
+  "execbroker:IvoaDataResource" -> "execbroker:IvoaDataResourceBlock" [headlabel="1",label="ivoa",labelfontsize=10] ;
+  "execbroker:SkaoDataResourceBlock" -> "execbroker:SkaoReplicaItem" [headlabel="1..*",label="replicas",labelfontsize=10] ;
+  "execbroker:SkaoDataResource" -> "execbroker:SkaoDataResourceBlock" [headlabel="1",label="skao",labelfontsize=10] ;
+  "execbroker:ExecutionRequestComponents" -> "execbroker:AbstractExecutable" [headlabel="1",label="executable",labelfontsize=10] ;
+  "execbroker:ExecutionRequestComponents" -> "execbroker:AbstractComputeResource" [headlabel="1",label="compute",labelfontsize=10] ;
+  "execbroker:ExecutionRequestComponents" -> "execbroker:AbstractStorageResource" [headlabel="1..*",label="storage",labelfontsize=10] ;
+  "execbroker:ExecutionRequestComponents" -> "execbroker:AbstractVolumeMount" [headlabel="1..*",label="volumes",labelfontsize=10] ;
+  "execbroker:ExecutionRequestComponents" -> "execbroker:AbstractDataResource" [headlabel="1..*",label="data",labelfontsize=10] ;
+  "execbroker:RequestedScheduleBlock" -> "execbroker:RequestedScheduleItem" [headlabel="1",label="requested",labelfontsize=10] ;
+  "execbroker:OfferSetRequest" -> "execbroker:RequestedScheduleBlock" [headlabel="1",label="schedule",labelfontsize=10] ;
+  "execbroker:SimpleExecutionComponents" -> "execbroker:AbstractExecutable" [headlabel="1",label="executable",labelfontsize=10] ;
+  "execbroker:SimpleExecutionComponents" -> "execbroker:AbstractComputeResource" [headlabel="1",label="compute",labelfontsize=10] ;
+  "execbroker:SimpleExecutionComponents" -> "execbroker:AbstractStorageResource" [headlabel="1..*",label="storage",labelfontsize=10] ;
+  "execbroker:SimpleExecutionComponents" -> "execbroker:AbstractVolumeMount" [headlabel="1..*",label="volumes",labelfontsize=10] ;
+  "execbroker:SimpleExecutionComponents" -> "execbroker:AbstractDataResource" [headlabel="1..*",label="data",labelfontsize=10] ;
+  "execbroker:SimpleExecutionSession" -> "execbroker:SimpleExecutionComponents" [headlabel="1",label="components",labelfontsize=10] ;
+  "execbroker:SimpleExecutionSession" -> "execbroker:SimpleSessionConnector" [headlabel="1..*",label="connectors",labelfontsize=10] ;
+  "execbroker:ScheduledExecutionSession" -> "execbroker:ScheduledExecutionSchedule" [headlabel="1",label="schedule",labelfontsize=10] ;
+  "execbroker:OfferSetResponse" -> "execbroker:AbstractExecutionSession" [headlabel="1..*",label="offers",labelfontsize=10] ;
+    
+}
+  

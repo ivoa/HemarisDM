@@ -1,0 +1,2796 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../OfferSetResponse/">
+      
+      
+        <link rel="next" href="../RequestedScheduleItem/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>RequestedScheduleBlock - ExecutionBroker Data Model Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#objecttype-requestedscheduleblock" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ExecutionBroker Data Model Documentation" class="md-header__button md-logo" aria-label="ExecutionBroker Data Model Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ExecutionBroker Data Model Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              RequestedScheduleBlock
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ivoa/ExecutionBrokerDM" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Introduction
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../schema/" class="md-tabs__link">
+        
+  
+    
+  
+  Schema
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../ExecutionBrokerDM-v1.vo-dml/" class="md-tabs__link">
+          
+  
+  AutoGenerated Documentation
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../javadoc" class="md-tabs__link">
+        
+  
+    
+  
+  JavaDoc
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ExecutionBroker Data Model Documentation" class="md-nav__button md-logo" aria-label="ExecutionBroker Data Model Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ExecutionBroker Data Model Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ivoa/ExecutionBrokerDM" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../schema/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    AutoGenerated Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AutoGenerated Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    execbroker model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            execbroker model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ExecutionBrokerDM-v1.vo-dml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2" id="__nav_3_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ObjectTypes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            ObjectTypes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AbstractComponent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AbstractComponent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AbstractComputeResource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AbstractComputeResource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AbstractDataResource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AbstractDataResource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AbstractExecutable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AbstractExecutable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AbstractExecutionSession/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AbstractExecutionSession
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AbstractOption/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AbstractOption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AbstractStorageResource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AbstractStorageResource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AbstractUpdate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AbstractUpdate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AbstractVolumeMount/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AbstractVolumeMount
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ComponentMetadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ComponentMetadata
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DockerContainer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DockerContainer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DockerImageSpec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DockerImageSpec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DockerNetworkPort/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DockerNetworkPort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DockerNetworkSpec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DockerNetworkSpec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EnumValueOption/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EnumValueOption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EnumValueUpdate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EnumValueUpdate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ExecutionRequestComponents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ExecutionRequestComponents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ExecutionSessionResponseFour/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ExecutionSessionResponseFour
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntegerDeltaOption/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IntegerDeltaOption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntegerDeltaUpdate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IntegerDeltaUpdate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntegerValueOption/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IntegerValueOption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntegerValueUpdate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IntegerValueUpdate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IvoaDataLinkItem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IvoaDataLinkItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IvoaDataResource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IvoaDataResource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IvoaDataResourceBlock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IvoaDataResourceBlock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IvoaObsCoreItem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IvoaObsCoreItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JupyterNotebook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JupyterNotebook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LifecycleComponent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LifecycleComponent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MessageItem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MessageItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OfferSetRequest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OfferSetRequest
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OfferSetResponse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OfferSetResponse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    RequestedScheduleBlock
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    RequestedScheduleBlock
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Members
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Containment
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RequestedScheduleItem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RequestedScheduleItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RucioDataResource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RucioDataResource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../S3DataResource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    S3DataResource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScheduledExecutionSchedule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ScheduledExecutionSchedule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScheduledExecutionSession/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ScheduledExecutionSession
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SimpleComputeResource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleComputeResource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SimpleDataResource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleDataResource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SimpleExecutionComponents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleExecutionComponents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SimpleExecutionSession/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleExecutionSession
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SimpleSessionConnector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleSessionConnector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SimpleStorageResource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleStorageResource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SimpleVolumeMount/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleVolumeMount
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SingularityContainer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SingularityContainer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SkaoDataResource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SkaoDataResource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SkaoDataResourceBlock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SkaoDataResourceBlock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SkaoReplicaItem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SkaoReplicaItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StringValueOption/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StringValueOption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StringValueUpdate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StringValueUpdate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_3" id="__nav_3_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DataTypes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            DataTypes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DockerExternalPort/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DockerExternalPort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DockerInternalPort/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DockerInternalPort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DockerPlatformSpec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DockerPlatformSpec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LifecycleSchedule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LifecycleSchedule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LifecycleStartDurationInstant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LifecycleStartDurationInstant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LifecycleStartDurationInterval/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LifecycleStartDurationInterval
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NameValueMap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NameValueMap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RucioDataResourceBlock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RucioDataResourceBlock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScheduleStartDurationInstant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ScheduleStartDurationInstant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScheduleStartDurationInterval/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ScheduleStartDurationInterval
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SimpleComputeCores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleComputeCores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SimpleComputeMemory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleComputeMemory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SimpleStorageSize/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleStorageSize
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SkaoChecksumItem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SkaoChecksumItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_4" id="__nav_3_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PrimitiveTypes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            PrimitiveTypes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ISO8601Duration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO8601Duration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ISO8601Instant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO8601Instant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ISO8601Interval/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO8601Interval
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_5" id="__nav_3_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Enumerations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Enumerations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LifecyclePhase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LifecyclePhase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SimpleExecutionSessionPhase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleExecutionSessionPhase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Imported Models
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Imported Models
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ivoa model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            ivoa model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IVOA-v1.0.vo-dml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1_2" id="__nav_3_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DataTypes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            DataTypes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ivoa/IntegerQuantity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IntegerQuantity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ivoa/Quantity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quantity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ivoa/RealQuantity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RealQuantity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1_3" id="__nav_3_2_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PrimitiveTypes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            PrimitiveTypes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ivoa/Unit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ivoa/anyURI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    anyURI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ivoa/boolean/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    boolean
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ivoa/complex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    complex
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ivoa/datetime/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    datetime
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ivoa/integer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    integer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ivoa/nonnegativeInteger/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nonnegativeInteger
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ivoa/rational/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    rational
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ivoa/real/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    real
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ivoa/string/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    string
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javadoc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JavaDoc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Members
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Containment
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/ivoa/ExecutionBrokerDM/edit/master/docs/generated/execbroker/RequestedScheduleBlock.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="objecttype-requestedscheduleblock">objectType RequestedScheduleBlock</h1>
+<p>The requested schedule.</p>
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" preserveAspectRatio="xMaxYMax meet" style="width:208px;height:269px" version="1.1" viewBox="0 0 208 269" width="100%" zoomAndPan="magnify" class="uml" alt="uml diagram" title=""><defs><filter height="300%" id="fhy5mten3owi1" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0" /><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0" /><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3" /><feBlend in="SourceGraphic" in2="blurOut3" mode="normal" /></filter></defs><g><rect fill="#D3D3D3" filter="url(#fhy5mten3owi1)" height="32" id="RequestedScheduleBlock" style="stroke: #800080; stroke-width: 2.0;" width="191" x="6" y="117" /><rect fill="#D3D3D3" height="32" style="stroke: #800080; stroke-width: 2.0;" width="191" x="6" y="117" /><ellipse cx="21" cy="133" fill="#ADD1B2" rx="11" ry="11" style="stroke: #800080; stroke-width: 1.0;" /><path d="M23.9688,138.6406 Q23.3906,138.9375 22.75,139.0781 Q22.1094,139.2344 21.4063,139.2344 Q18.9063,139.2344 17.5781,137.5938 Q16.2656,135.9375 16.2656,132.8125 Q16.2656,129.6875 17.5781,128.0313 Q18.9063,126.375 21.4063,126.375 Q22.1094,126.375 22.75,126.5313 Q23.4063,126.6875 23.9688,126.9844 L23.9688,129.7031 Q23.3438,129.125 22.75,128.8594 Q22.1563,128.5781 21.5313,128.5781 Q20.1875,128.5781 19.5,129.6563 Q18.8125,130.7188 18.8125,132.8125 Q18.8125,134.9063 19.5,135.9844 Q20.1875,137.0469 21.5313,137.0469 Q22.1563,137.0469 22.75,136.7813 Q23.3438,136.5 23.9688,135.9219 L23.9688,138.6406 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="159" x="35" y="137.1543">RequestedScheduleBlock</text><a href="../RequestedScheduleItem" target="_top" title="../RequestedScheduleItem" xlink:actuate="onRequest" xlink:href="../RequestedScheduleItem" xlink:show="new" xlink:title="../RequestedScheduleItem" xlink:type="simple"><rect fill="#FEFECE" filter="url(#fhy5mten3owi1)" height="32" id="RequestedScheduleItem" style="stroke: #A80036; stroke-width: 1.5;" width="185" x="9" y="226" /><ellipse cx="24" cy="242" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" /><path d="M26.9688,247.6406 Q26.3906,247.9375 25.75,248.0781 Q25.1094,248.2344 24.4063,248.2344 Q21.9063,248.2344 20.5781,246.5938 Q19.2656,244.9375 19.2656,241.8125 Q19.2656,238.6875 20.5781,237.0313 Q21.9063,235.375 24.4063,235.375 Q25.1094,235.375 25.75,235.5313 Q26.4063,235.6875 26.9688,235.9844 L26.9688,238.7031 Q26.3438,238.125 25.75,237.8594 Q25.1563,237.5781 24.5313,237.5781 Q23.1875,237.5781 22.5,238.6563 Q21.8125,239.7188 21.8125,241.8125 Q21.8125,243.9063 22.5,244.9844 Q23.1875,246.0469 24.5313,246.0469 Q25.1563,246.0469 25.75,245.7813 Q26.3438,245.5 26.9688,244.9219 L26.9688,247.6406 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="153" x="38" y="246.1543">RequestedScheduleItem</text></a><a href="../OfferSetRequest" target="_top" title="../OfferSetRequest" xlink:actuate="onRequest" xlink:href="../OfferSetRequest" xlink:show="new" xlink:title="../OfferSetRequest" xlink:type="simple"><rect fill="#FEFECE" filter="url(#fhy5mten3owi1)" height="32" id="OfferSetRequest" style="stroke: #A80036; stroke-width: 1.5;" width="135" x="34" y="8" /><ellipse cx="49" cy="24" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" /><path d="M51.9688,29.6406 Q51.3906,29.9375 50.75,30.0781 Q50.1094,30.2344 49.4063,30.2344 Q46.9063,30.2344 45.5781,28.5938 Q44.2656,26.9375 44.2656,23.8125 Q44.2656,20.6875 45.5781,19.0313 Q46.9063,17.375 49.4063,17.375 Q50.1094,17.375 50.75,17.5313 Q51.4063,17.6875 51.9688,17.9844 L51.9688,20.7031 Q51.3438,20.125 50.75,19.8594 Q50.1563,19.5781 49.5313,19.5781 Q48.1875,19.5781 47.5,20.6563 Q46.8125,21.7188 46.8125,23.8125 Q46.8125,25.9063 47.5,26.9844 Q48.1875,28.0469 49.5313,28.0469 Q50.1563,28.0469 50.75,27.7813 Q51.3438,27.5 51.9688,26.9219 L51.9688,29.6406 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="103" x="63" y="28.1543">OfferSetRequest</text></a><path d="M101.5,162.48 C101.5,182.77 101.5,209.26 101.5,225.7 " fill="none" id="RequestedScheduleBlock&lt;-RequestedScheduleItem" style="stroke: #0000FF; stroke-width: 1.0;" /><polygon fill="#0000FF" points="101.5,149.33,97.5,155.33,101.5,161.33,105.5,155.33,101.5,149.33" style="stroke: #0000FF; stroke-width: 1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="65" x="102.5" y="192.0669">requested</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="92.175" y="214.9051">1</text><path d="M101.5,53.48 C101.5,73.77 101.5,100.26 101.5,116.7 " fill="none" id="OfferSetRequest&lt;-RequestedScheduleBlock" style="stroke: #0000FF; stroke-width: 1.0;" /><polygon fill="#0000FF" points="101.5,40.33,97.5,46.33,101.5,52.33,105.5,46.33,101.5,40.33" style="stroke: #0000FF; stroke-width: 1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="57" x="102.5" y="83.0669">schedule</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="92.175" y="105.9051">1</text></g></svg></p>
+<h2 id="members">Members</h2>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>mult</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>requested</td>
+<td><a href="../RequestedScheduleItem/" title="objectType">RequestedScheduleItem</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="containment">Containment</h2>
+<p>This is contained by <a href="../OfferSetRequest/" title="objectType">OfferSetRequest</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "content.action.edit", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns/graphml"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.0/ygraphml.xsd">
+   <key xmlns:y="http://www.yworks.com/xml/graphml"
+        attr.name="Title"
+        attr.type="string"
+        for="graph"
+        id="t0">
+      <default xml:space="preserve">execbroker</default>
+   </key>
+   <key xmlns:y="http://www.yworks.com/xml/graphml"
+        attr.name="description"
+        attr.type="string"
+        for="node"
+        id="k1"/>
+   <key xmlns:y="http://www.yworks.com/xml/graphml"
+        id="k2"
+        for="node"
+        yfiles.type="nodegraphics"/>
+   <key xmlns:y="http://www.yworks.com/xml/graphml"
+        id="k3"
+        for="edge"
+        yfiles.type="edgegraphics"/>
+   <key xmlns:y="http://www.yworks.com/xml/graphml"
+        id="k4"
+        for="graph"
+        yfiles.type="postprocessors"/>
+   <graph edgedefault="directed"><!--nodes-->
+      <node id="execbroker:ISO8601Instant">
+         <data key="k1">ISO8601Instant</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">ISO8601Instant</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="primitiveType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:ISO8601Duration">
+         <data key="k1">ISO8601Duration</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">ISO8601Duration</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="primitiveType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:ISO8601Interval">
+         <data key="k1">ISO8601Interval</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">ISO8601Interval</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="primitiveType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:LifecyclePhase">
+         <data key="k1">LifecyclePhase</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">LifecyclePhase</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="enumeration"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+INITIALIZING
++WAITING
++PREPARING
++AVAILABLE
++RUNNING
++RELEASING
++COMPLETED
++FAILED
++CANCELLED
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:SimpleExecutionSessionPhase">
+         <data key="k1">SimpleExecutionSessionPhase</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">SimpleExecutionSessionPhase</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="enumeration"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+INITIAL
++OFFERED
++ACCEPTED
++REJECTED
++EXPIRED
++WAITING
++PREPARING
++AVAILABLE
++RUNNING
++RELEASING
++COMPLETED
++FAILED
++CANCELLED
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:DockerPlatformSpec">
+         <data key="k1">DockerPlatformSpec</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">DockerPlatformSpec</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="dataType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+architecture : ivoa:string
++os : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:NameValueMap">
+         <data key="k1">NameValueMap</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">NameValueMap</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="dataType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+key : ivoa:string
++value : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:DockerInternalPort">
+         <data key="k1">DockerInternalPort</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">DockerInternalPort</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="dataType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+port : ivoa:integer
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:DockerExternalPort">
+         <data key="k1">DockerExternalPort</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">DockerExternalPort</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="dataType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+port : ivoa:integer
++addresses : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:LifecycleStartDurationInstant">
+         <data key="k1">LifecycleStartDurationInstant</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">LifecycleStartDurationInstant</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="dataType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+start : execbroker:ISO8601Instant
++duration : execbroker:ISO8601Duration
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:LifecycleStartDurationInterval">
+         <data key="k1">LifecycleStartDurationInterval</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">LifecycleStartDurationInterval</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="dataType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+start : execbroker:ISO8601Interval
++duration : execbroker:ISO8601Duration
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:LifecycleSchedule">
+         <data key="k1">LifecycleSchedule</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">LifecycleSchedule</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="dataType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+preparing : execbroker:LifecycleStartDurationInstant
++available : execbroker:LifecycleStartDurationInterval
++releasing : execbroker:LifecycleStartDurationInstant
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:SimpleComputeCores">
+         <data key="k1">SimpleComputeCores</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">SimpleComputeCores</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="dataType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+min : ivoa:integer
++max : ivoa:integer
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:SimpleComputeMemory">
+         <data key="k1">SimpleComputeMemory</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">SimpleComputeMemory</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="dataType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+min : ivoa:integer
++max : ivoa:integer
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:SimpleStorageSize">
+         <data key="k1">SimpleStorageSize</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">SimpleStorageSize</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="dataType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+min : ivoa:integer
++max : ivoa:integer
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:RucioDataResourceBlock">
+         <data key="k1">RucioDataResourceBlock</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">RucioDataResourceBlock</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="dataType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+endpoint : ivoa:string
++scope : ivoa:string
++object : ivoa:string
++type : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:SkaoChecksumItem">
+         <data key="k1">SkaoChecksumItem</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">SkaoChecksumItem</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="dataType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+type : ivoa:string
++value : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:ScheduleStartDurationInstant">
+         <data key="k1">ScheduleStartDurationInstant</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">ScheduleStartDurationInstant</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="dataType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+start : execbroker:ISO8601Instant
++duration : execbroker:ISO8601Duration
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:ScheduleStartDurationInterval">
+         <data key="k1">ScheduleStartDurationInterval</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">ScheduleStartDurationInterval</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="dataType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+start : execbroker:ISO8601Interval
++duration : execbroker:ISO8601Duration
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:ExecutionSessionResponseFour">
+         <data key="k1">ExecutionSessionResponseFour</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">ExecutionSessionResponseFour</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:AbstractExecutable">
+         <data key="k1">AbstractExecutable</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">AbstractExecutable</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:DockerImageSpec">
+         <data key="k1">DockerImageSpec</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">DockerImageSpec</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+locations : ivoa:string
++digest : ivoa:string
++platform : execbroker:DockerPlatformSpec
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:DockerNetworkPort">
+         <data key="k1">DockerNetworkPort</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">DockerNetworkPort</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+access : ivoa:boolean
++internal : execbroker:DockerInternalPort
++external : execbroker:DockerExternalPort
++protocol : ivoa:string
++path : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:DockerNetworkSpec">
+         <data key="k1">DockerNetworkSpec</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">DockerNetworkSpec</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:DockerContainer">
+         <data key="k1">DockerContainer</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">DockerContainer</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+privileged : ivoa:boolean
++entrypoint : ivoa:string
++environment : execbroker:NameValueMap
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:SingularityContainer">
+         <data key="k1">SingularityContainer</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">SingularityContainer</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+location : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:JupyterNotebook">
+         <data key="k1">JupyterNotebook</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">JupyterNotebook</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+location : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:MessageItem">
+         <data key="k1">MessageItem</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">MessageItem</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+kind : ivoa:string
++time : ivoa:string
++level : ivoa:string
++template : ivoa:string
++values : execbroker:NameValueMap
++message : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:AbstractOption">
+         <data key="k1">AbstractOption</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">AbstractOption</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+path : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:StringValueOption">
+         <data key="k1">StringValueOption</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">StringValueOption</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+pattern : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:EnumValueOption">
+         <data key="k1">EnumValueOption</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">EnumValueOption</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+values : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:IntegerValueOption">
+         <data key="k1">IntegerValueOption</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">IntegerValueOption</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+min : ivoa:integer
++max : ivoa:integer
++units : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:IntegerDeltaOption">
+         <data key="k1">IntegerDeltaOption</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">IntegerDeltaOption</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+min : ivoa:integer
++max : ivoa:integer
++units : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:ComponentMetadata">
+         <data key="k1">ComponentMetadata</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">ComponentMetadata</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+uuid : ivoa:string
++name : ivoa:string
++url : ivoa:string
++description : ivoa:string
++created : ivoa:string
++modified : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:AbstractComponent">
+         <data key="k1">AbstractComponent</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bolditalic" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">AbstractComponent</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:LifecycleComponent">
+         <data key="k1">LifecycleComponent</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bolditalic" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">LifecycleComponent</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+phase : execbroker:LifecyclePhase
++schedule : execbroker:LifecycleSchedule
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:AbstractComputeResource">
+         <data key="k1">AbstractComputeResource</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bolditalic" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">AbstractComputeResource</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:SimpleComputeResource">
+         <data key="k1">SimpleComputeResource</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">SimpleComputeResource</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+cores : execbroker:SimpleComputeCores
++memory : execbroker:SimpleComputeMemory
++volumes : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:AbstractStorageResource">
+         <data key="k1">AbstractStorageResource</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bolditalic" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">AbstractStorageResource</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:SimpleStorageResource">
+         <data key="k1">SimpleStorageResource</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">SimpleStorageResource</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+size : execbroker:SimpleStorageSize
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:AbstractVolumeMount">
+         <data key="k1">AbstractVolumeMount</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bolditalic" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">AbstractVolumeMount</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:SimpleVolumeMount">
+         <data key="k1">SimpleVolumeMount</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">SimpleVolumeMount</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+path : ivoa:string
++mode : ivoa:string
++cardinality : ivoa:string
++resources : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:AbstractDataResource">
+         <data key="k1">AbstractDataResource</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bolditalic" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">AbstractDataResource</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:SimpleDataResource">
+         <data key="k1">SimpleDataResource</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">SimpleDataResource</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+location : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:S3DataResource">
+         <data key="k1">S3DataResource</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">S3DataResource</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+endpoint : ivoa:string
++template : ivoa:string
++bucket : ivoa:string
++object : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:RucioDataResource">
+         <data key="k1">RucioDataResource</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">RucioDataResource</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+rucio : execbroker:RucioDataResourceBlock
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:IvoaObsCoreItem">
+         <data key="k1">IvoaObsCoreItem</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">IvoaObsCoreItem</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+obs_id : ivoa:string
++obs_collection : ivoa:string
++obs_publisher_did : ivoa:string
++obs_creator_did : ivoa:string
++dataproduct_type : ivoa:string
++calib_level : ivoa:integer
++access_url : ivoa:string
++access_format : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:IvoaDataLinkItem">
+         <data key="k1">IvoaDataLinkItem</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">IvoaDataLinkItem</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+LinkID : ivoa:string
++access_url : ivoa:string
++service_def : ivoa:string
++error_message : ivoa:string
++description : ivoa:string
++semantics : ivoa:string
++content_type : ivoa:string
++content_length : ivoa:integer
++content_qualifier : ivoa:string
++local_semantics : ivoa:string
++link_auth : ivoa:string
++link_authorized : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:IvoaDataResourceBlock">
+         <data key="k1">IvoaDataResourceBlock</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">IvoaDataResourceBlock</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+ivoid : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:IvoaDataResource">
+         <data key="k1">IvoaDataResource</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">IvoaDataResource</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:SkaoReplicaItem">
+         <data key="k1">SkaoReplicaItem</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">SkaoReplicaItem</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+rsename : ivoa:string
++dataurl : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:SkaoDataResourceBlock">
+         <data key="k1">SkaoDataResourceBlock</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">SkaoDataResourceBlock</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+namespace : ivoa:string
++objectname : ivoa:string
++objecttype : ivoa:string
++datasize : ivoa:integer
++checksum : execbroker:SkaoChecksumItem
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:SkaoDataResource">
+         <data key="k1">SkaoDataResource</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">SkaoDataResource</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:ExecutionRequestComponents">
+         <data key="k1">ExecutionRequestComponents</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">ExecutionRequestComponents</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:RequestedScheduleItem">
+         <data key="k1">RequestedScheduleItem</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">RequestedScheduleItem</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+duration : execbroker:ISO8601Duration
++start : execbroker:ISO8601Interval
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:RequestedScheduleBlock">
+         <data key="k1">RequestedScheduleBlock</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">RequestedScheduleBlock</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:OfferSetRequest">
+         <data key="k1">OfferSetRequest</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">OfferSetRequest</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:AbstractExecutionSession">
+         <data key="k1">AbstractExecutionSession</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">AbstractExecutionSession</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:SimpleExecutionComponents">
+         <data key="k1">SimpleExecutionComponents</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">SimpleExecutionComponents</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:SimpleSessionConnector">
+         <data key="k1">SimpleSessionConnector</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">SimpleSessionConnector</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+kind : ivoa:string
++status : ivoa:string
++protocol : ivoa:string
++location : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:SimpleExecutionSession">
+         <data key="k1">SimpleExecutionSession</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">SimpleExecutionSession</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+phase : execbroker:SimpleExecutionSessionPhase
++expires : ivoa:datetime
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:ScheduledExecutionSchedule">
+         <data key="k1">ScheduledExecutionSchedule</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">ScheduledExecutionSchedule</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+preparing : execbroker:ScheduleStartDurationInstant
++available : execbroker:ScheduleStartDurationInterval
++releasing : execbroker:ScheduleStartDurationInstant
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:ScheduledExecutionSession">
+         <data key="k1">ScheduledExecutionSession</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">ScheduledExecutionSession</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:OfferSetResponse">
+         <data key="k1">OfferSetResponse</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">OfferSetResponse</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+result : ivoa:string
++description : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:AbstractUpdate">
+         <data key="k1">AbstractUpdate</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">AbstractUpdate</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+path : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:StringValueUpdate">
+         <data key="k1">StringValueUpdate</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">StringValueUpdate</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+value : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:EnumValueUpdate">
+         <data key="k1">EnumValueUpdate</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">EnumValueUpdate</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+value : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:IntegerValueUpdate">
+         <data key="k1">IntegerValueUpdate</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">IntegerValueUpdate</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+value : ivoa:integer
++units : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <node id="execbroker:IntegerDeltaUpdate">
+         <data key="k1">IntegerDeltaUpdate</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">IntegerDeltaUpdate</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype=""
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+delta : ivoa:integer
++units : ivoa:string
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <!--imported nodes-->
+      <node id="ivoa:string">
+         <data key="k1">string</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">string</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="primitiveType"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve"/>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
+      <!--edges-->
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e19"
+            source="execbroker:ISO8601Instant"
+            target="ivoa:string">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e25"
+            source="execbroker:ISO8601Duration"
+            target="ivoa:string">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e32"
+            source="execbroker:ISO8601Interval"
+            target="ivoa:string">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e467"
+            source="execbroker:AbstractExecutable"
+            target="execbroker:AbstractComponent">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e576"
+            source="execbroker:DockerContainer"
+            target="execbroker:AbstractExecutable">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e627"
+            source="execbroker:SingularityContainer"
+            target="execbroker:AbstractExecutable">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e642"
+            source="execbroker:JupyterNotebook"
+            target="execbroker:AbstractExecutable">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e728"
+            source="execbroker:StringValueOption"
+            target="execbroker:AbstractOption">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e743"
+            source="execbroker:EnumValueOption"
+            target="execbroker:AbstractOption">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e758"
+            source="execbroker:IntegerValueOption"
+            target="execbroker:AbstractOption">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e791"
+            source="execbroker:IntegerDeltaOption"
+            target="execbroker:AbstractOption">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e914"
+            source="execbroker:LifecycleComponent"
+            target="execbroker:AbstractComponent">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e938"
+            source="execbroker:AbstractComputeResource"
+            target="execbroker:LifecycleComponent">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e944"
+            source="execbroker:SimpleComputeResource"
+            target="execbroker:AbstractComputeResource">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e977"
+            source="execbroker:AbstractStorageResource"
+            target="execbroker:LifecycleComponent">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e983"
+            source="execbroker:SimpleStorageResource"
+            target="execbroker:AbstractStorageResource">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e998"
+            source="execbroker:AbstractVolumeMount"
+            target="execbroker:AbstractComponent">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1004"
+            source="execbroker:SimpleVolumeMount"
+            target="execbroker:AbstractVolumeMount">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1046"
+            source="execbroker:AbstractDataResource"
+            target="execbroker:LifecycleComponent">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1052"
+            source="execbroker:SimpleDataResource"
+            target="execbroker:AbstractDataResource">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1067"
+            source="execbroker:S3DataResource"
+            target="execbroker:AbstractDataResource">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1109"
+            source="execbroker:RucioDataResource"
+            target="execbroker:AbstractDataResource">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1345"
+            source="execbroker:IvoaDataResource"
+            target="execbroker:AbstractDataResource">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1440"
+            source="execbroker:SkaoDataResource"
+            target="execbroker:IvoaDataResource">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1539"
+            source="execbroker:OfferSetRequest"
+            target="execbroker:ExecutionRequestComponents">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1648"
+            source="execbroker:SimpleExecutionSession"
+            target="execbroker:AbstractExecutionSession">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1721"
+            source="execbroker:ScheduledExecutionSession"
+            target="execbroker:SimpleExecutionSession">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1736"
+            source="execbroker:OfferSetResponse"
+            target="execbroker:AbstractComponent">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1782"
+            source="execbroker:StringValueUpdate"
+            target="execbroker:AbstractUpdate">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1797"
+            source="execbroker:EnumValueUpdate"
+            target="execbroker:AbstractUpdate">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1812"
+            source="execbroker:IntegerValueUpdate"
+            target="execbroker:AbstractUpdate">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1837"
+            source="execbroker:IntegerDeltaUpdate"
+            target="execbroker:AbstractUpdate">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
+               <y:Arrows source="none" target="white_delta"/>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e469"
+            source="execbroker:AbstractExecutable"
+            target="execbroker:LifecycleComponent">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">lifecycle<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e562"
+            source="execbroker:DockerNetworkSpec"
+            target="execbroker:DockerNetworkPort">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">ports<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e578"
+            source="execbroker:DockerContainer"
+            target="execbroker:DockerImageSpec">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">image<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e614"
+            source="execbroker:DockerContainer"
+            target="execbroker:DockerNetworkSpec">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">network<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e878"
+            source="execbroker:ComponentMetadata"
+            target="execbroker:MessageItem">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">messages<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">0..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e887"
+            source="execbroker:ComponentMetadata"
+            target="execbroker:AbstractOption">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">options<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">0..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e900"
+            source="execbroker:AbstractComponent"
+            target="execbroker:ComponentMetadata">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">meta<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1323"
+            source="execbroker:IvoaDataResourceBlock"
+            target="execbroker:IvoaObsCoreItem">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">obscore<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1332"
+            source="execbroker:IvoaDataResourceBlock"
+            target="execbroker:IvoaDataLinkItem">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">datalink<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1347"
+            source="execbroker:IvoaDataResource"
+            target="execbroker:IvoaDataResourceBlock">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">ivoa<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1427"
+            source="execbroker:SkaoDataResourceBlock"
+            target="execbroker:SkaoReplicaItem">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">replicas<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1442"
+            source="execbroker:SkaoDataResource"
+            target="execbroker:SkaoDataResourceBlock">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">skao<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1455"
+            source="execbroker:ExecutionRequestComponents"
+            target="execbroker:AbstractExecutable">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">executable<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1464"
+            source="execbroker:ExecutionRequestComponents"
+            target="execbroker:AbstractComputeResource">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">compute<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1473"
+            source="execbroker:ExecutionRequestComponents"
+            target="execbroker:AbstractStorageResource">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">storage<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1482"
+            source="execbroker:ExecutionRequestComponents"
+            target="execbroker:AbstractVolumeMount">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">volumes<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1491"
+            source="execbroker:ExecutionRequestComponents"
+            target="execbroker:AbstractDataResource">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">data<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1526"
+            source="execbroker:RequestedScheduleBlock"
+            target="execbroker:RequestedScheduleItem">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">requested<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1541"
+            source="execbroker:OfferSetRequest"
+            target="execbroker:RequestedScheduleBlock">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">schedule<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1559"
+            source="execbroker:SimpleExecutionComponents"
+            target="execbroker:AbstractExecutable">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">executable<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1568"
+            source="execbroker:SimpleExecutionComponents"
+            target="execbroker:AbstractComputeResource">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">compute<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1577"
+            source="execbroker:SimpleExecutionComponents"
+            target="execbroker:AbstractStorageResource">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">storage<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1586"
+            source="execbroker:SimpleExecutionComponents"
+            target="execbroker:AbstractVolumeMount">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">volumes<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1595"
+            source="execbroker:SimpleExecutionComponents"
+            target="execbroker:AbstractDataResource">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">data<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1668"
+            source="execbroker:SimpleExecutionSession"
+            target="execbroker:SimpleExecutionComponents">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">components<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1677"
+            source="execbroker:SimpleExecutionSession"
+            target="execbroker:SimpleSessionConnector">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">connectors<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1723"
+            source="execbroker:ScheduledExecutionSession"
+            target="execbroker:ScheduledExecutionSchedule">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">schedule<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1756"
+            source="execbroker:OfferSetResponse"
+            target="execbroker:AbstractExecutionSession">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">offers<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <data xmlns:y="http://www.yworks.com/xml/graphml" key="k4">
+         <y:Postprocessors>
+            <y:Processor class="yext.graphml.processor.NodeSizeAdapter">
+               <y:Option name="IGNORE_WIDTHS" value="false"/>
+               <y:Option name="IGNORE_HEIGHTS" value="false"/>
+               <y:Option name="ADAPT_TO_MAXIMUM_NODE" value="false"/>
+            </y:Processor>
+            <y:Processor class="y.module.TreeLayoutModule">
+               <y:Option name="GENERAL.LAYOUT_STYLE" value="AR"/>
+               <y:Option name="AR.BEND_DISTANCE" value="20"/>
+               <y:Option name="AR.VERTICAL_SPACE" value="10"/>
+               <y:Option name="AR.ASPECT_RATIO" value="1.41"/>
+               <y:Option name="AR.HORIZONTAL_SPACE" value="10"/>
+               <y:Option name="AR.USE_VIEW_ASPECT_RATIO" value="true"/>
+            </y:Processor>
+         </y:Postprocessors>
+      </data>
+   </graph>
+</graphml>

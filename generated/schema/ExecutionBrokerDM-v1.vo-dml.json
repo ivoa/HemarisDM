@@ -1,0 +1,1830 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$id" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json",
+  "title" : "",
+  "description" : "",
+  "type" : "object",
+  "properties" : {
+    "ExecbrokerModel" : {
+      "type" : "object",
+      "properties" : {
+        "refs" : {
+          "type" : "object",
+          "properties" : {
+            "$comment" : "placeholder to make commas easier!"
+          },
+          "additionalProperties" : false
+        },
+        "content" : {
+          "type" : "array",
+          "items" : {
+            "anyOf" : [ {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/ExecutionSessionResponseFour"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/ExecutionRequestComponents"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/OfferSetRequest"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/OfferSetResponse"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractUpdate"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/StringValueUpdate"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/EnumValueUpdate"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/IntegerValueUpdate"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/IntegerDeltaUpdate"
+            } ]
+          },
+          "additionalProperties" : false
+        }
+      },
+      "additionalProperties" : false
+    }
+  },
+  "$defs" : {
+    "$comment" : "placeholder to make commas easier!",
+    "ExecutionSessionResponseFour" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ ],
+      "additionalProperties" : false
+    },
+    "AbstractExecutable" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractComponent"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "lifecycle" : {
+            "type" : "object",
+            "anyOf" : [ {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractComputeResource"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleComputeResource"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractStorageResource"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleStorageResource"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractDataResource"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleDataResource"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/S3DataResource"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/RucioDataResource"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/IvoaDataResource"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SkaoDataResource"
+            } ]
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "lifecycle" ]
+      } ]
+    },
+    "DockerImageSpec" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "locations" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "description" : ""
+        },
+        "digest" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "platform" : {
+          "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/DockerPlatformSpec",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "locations", "digest", "platform" ],
+      "additionalProperties" : false
+    },
+    "DockerNetworkPort" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "access" : {
+          "type" : "boolean",
+          "description" : ""
+        },
+        "internal" : {
+          "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/DockerInternalPort",
+          "description" : ""
+        },
+        "external" : {
+          "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/DockerExternalPort",
+          "description" : ""
+        },
+        "protocol" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "path" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "access", "internal", "external", "protocol", "path" ],
+      "additionalProperties" : false
+    },
+    "DockerNetworkSpec" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "ports" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/DockerNetworkPort"
+          }
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "ports" ],
+      "additionalProperties" : false
+    },
+    "DockerContainer" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractExecutable"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "privileged" : {
+            "type" : "boolean",
+            "description" : ""
+          },
+          "entrypoint" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "environment" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/NameValueMap"
+            },
+            "description" : ""
+          },
+          "image" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/DockerImageSpec"
+          },
+          "network" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/DockerNetworkSpec"
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "image", "privileged", "entrypoint", "network" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "SingularityContainer" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractExecutable"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "location" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "location" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "JupyterNotebook" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractExecutable"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "location" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "location" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "MessageItem" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "kind" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "time" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "level" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "template" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "values" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/NameValueMap"
+          },
+          "description" : ""
+        },
+        "message" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "kind", "time", "level", "template", "message" ],
+      "additionalProperties" : false
+    },
+    "AbstractOption" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "path" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "path" ]
+    },
+    "StringValueOption" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractOption"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "pattern" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "pattern" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "EnumValueOption" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractOption"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "values" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            },
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "values" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "IntegerValueOption" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractOption"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "min" : {
+            "type" : "number",
+            "description" : ""
+          },
+          "max" : {
+            "type" : "number",
+            "description" : ""
+          },
+          "units" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "min", "max", "units" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "IntegerDeltaOption" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractOption"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "min" : {
+            "type" : "number",
+            "description" : ""
+          },
+          "max" : {
+            "type" : "number",
+            "description" : ""
+          },
+          "units" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "min", "max", "units" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "ComponentMetadata" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "uuid" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "name" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "url" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "description" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "created" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "modified" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "messages" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/MessageItem"
+          }
+        },
+        "options" : {
+          "type" : "array",
+          "items" : {
+            "anyOf" : [ {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/StringValueOption"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/EnumValueOption"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/IntegerValueOption"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/IntegerDeltaOption"
+            } ]
+          }
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ ],
+      "additionalProperties" : false
+    },
+    "AbstractComponent" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "meta" : {
+          "type" : "object",
+          "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/ComponentMetadata"
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "meta" ]
+    },
+    "LifecycleComponent" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractComponent"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "phase" : {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/LifecyclePhase",
+            "description" : ""
+          },
+          "schedule" : {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/LifecycleSchedule",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "phase", "schedule" ]
+      } ]
+    },
+    "AbstractComputeResource" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/LifecycleComponent"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ ]
+      } ]
+    },
+    "SimpleComputeResource" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractComputeResource"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "cores" : {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleComputeCores",
+            "description" : ""
+          },
+          "memory" : {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleComputeMemory",
+            "description" : ""
+          },
+          "volumes" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            },
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "cores", "memory", "volumes" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "AbstractStorageResource" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/LifecycleComponent"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ ]
+      } ]
+    },
+    "SimpleStorageResource" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractStorageResource"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "size" : {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleStorageSize",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "size" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "AbstractVolumeMount" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractComponent"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ ]
+      } ]
+    },
+    "SimpleVolumeMount" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractVolumeMount"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "path" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "mode" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "cardinality" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "resources" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            },
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "path", "mode", "cardinality", "resources" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "AbstractDataResource" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/LifecycleComponent"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ ]
+      } ]
+    },
+    "SimpleDataResource" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractDataResource"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "location" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "location" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "S3DataResource" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractDataResource"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "endpoint" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "template" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "bucket" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "object" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "endpoint", "template", "bucket", "object" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "RucioDataResource" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractDataResource"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "rucio" : {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/RucioDataResourceBlock",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "rucio" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "IvoaObsCoreItem" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "obs_id" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "obs_collection" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "obs_publisher_did" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "obs_creator_did" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "dataproduct_type" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "calib_level" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "access_url" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "access_format" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "obs_id", "obs_collection", "obs_publisher_did", "obs_creator_did", "dataproduct_type", "calib_level", "access_url", "access_format" ],
+      "additionalProperties" : false
+    },
+    "IvoaDataLinkItem" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "LinkID" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "access_url" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "service_def" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "error_message" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "description" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "semantics" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "content_type" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "content_length" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "content_qualifier" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "local_semantics" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "link_auth" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "link_authorized" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "LinkID", "access_url", "service_def", "error_message", "description", "semantics", "content_type", "content_length", "content_qualifier", "local_semantics", "link_auth", "link_authorized" ],
+      "additionalProperties" : false
+    },
+    "IvoaDataResourceBlock" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "ivoid" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "obscore" : {
+          "type" : "object",
+          "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/IvoaObsCoreItem"
+        },
+        "datalink" : {
+          "type" : "object",
+          "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/IvoaDataLinkItem"
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "ivoid", "obscore", "datalink" ],
+      "additionalProperties" : false
+    },
+    "IvoaDataResource" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractDataResource"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "ivoa" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/IvoaDataResourceBlock"
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "ivoa" ]
+      } ]
+    },
+    "SkaoReplicaItem" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "rsename" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "dataurl" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "rsename", "dataurl" ],
+      "additionalProperties" : false
+    },
+    "SkaoDataResourceBlock" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "namespace" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "objectname" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "objecttype" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "datasize" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "checksum" : {
+          "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SkaoChecksumItem",
+          "description" : ""
+        },
+        "replicas" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SkaoReplicaItem"
+          }
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "namespace", "objectname", "objecttype", "datasize", "checksum", "replicas" ],
+      "additionalProperties" : false
+    },
+    "SkaoDataResource" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/IvoaDataResource"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "skao" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SkaoDataResourceBlock"
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "skao" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "ExecutionRequestComponents" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "executable" : {
+          "type" : "object",
+          "anyOf" : [ {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/DockerContainer"
+          }, {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SingularityContainer"
+          }, {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/JupyterNotebook"
+          } ]
+        },
+        "compute" : {
+          "type" : "object",
+          "anyOf" : [ {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleComputeResource"
+          } ]
+        },
+        "storage" : {
+          "type" : "array",
+          "items" : {
+            "anyOf" : [ {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleStorageResource"
+            } ]
+          }
+        },
+        "volumes" : {
+          "type" : "array",
+          "items" : {
+            "anyOf" : [ {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleVolumeMount"
+            } ]
+          }
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "anyOf" : [ {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleDataResource"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/S3DataResource"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/RucioDataResource"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/IvoaDataResource"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SkaoDataResource"
+            } ]
+          }
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "executable", "compute", "storage", "volumes", "data" ]
+    },
+    "RequestedScheduleItem" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "duration" : {
+          "format" : "duration",
+          "description" : ""
+        },
+        "start" : {
+          "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/ISO8601Interval",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "duration", "start" ],
+      "additionalProperties" : false
+    },
+    "RequestedScheduleBlock" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "requested" : {
+          "type" : "object",
+          "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/RequestedScheduleItem"
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "requested" ],
+      "additionalProperties" : false
+    },
+    "OfferSetRequest" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/ExecutionRequestComponents"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "schedule" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/RequestedScheduleBlock"
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "schedule" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "AbstractExecutionSession" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ ]
+    },
+    "SimpleExecutionComponents" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "executable" : {
+          "type" : "object",
+          "anyOf" : [ {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/DockerContainer"
+          }, {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SingularityContainer"
+          }, {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/JupyterNotebook"
+          } ]
+        },
+        "compute" : {
+          "type" : "object",
+          "anyOf" : [ {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleComputeResource"
+          } ]
+        },
+        "storage" : {
+          "type" : "array",
+          "items" : {
+            "anyOf" : [ {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleStorageResource"
+            } ]
+          }
+        },
+        "volumes" : {
+          "type" : "array",
+          "items" : {
+            "anyOf" : [ {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleVolumeMount"
+            } ]
+          }
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "anyOf" : [ {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleDataResource"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/S3DataResource"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/RucioDataResource"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/IvoaDataResource"
+            }, {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SkaoDataResource"
+            } ]
+          }
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "executable", "compute", "storage", "volumes", "data" ],
+      "additionalProperties" : false
+    },
+    "SimpleSessionConnector" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "kind" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "status" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "protocol" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "location" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "kind", "status", "protocol", "location" ],
+      "additionalProperties" : false
+    },
+    "SimpleExecutionSession" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractExecutionSession"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "phase" : {
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleExecutionSessionPhase",
+            "description" : ""
+          },
+          "expires" : {
+            "format" : "date-time",
+            "description" : ""
+          },
+          "components" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleExecutionComponents"
+          },
+          "connectors" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleSessionConnector"
+            }
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "phase", "expires", "components", "connectors" ]
+      } ]
+    },
+    "ScheduledExecutionSchedule" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "preparing" : {
+          "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/ScheduleStartDurationInstant",
+          "description" : ""
+        },
+        "available" : {
+          "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/ScheduleStartDurationInterval",
+          "description" : ""
+        },
+        "releasing" : {
+          "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/ScheduleStartDurationInstant",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "preparing", "available", "releasing" ],
+      "additionalProperties" : false
+    },
+    "ScheduledExecutionSession" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleExecutionSession"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "schedule" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/ScheduledExecutionSchedule"
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "schedule" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "OfferSetResponse" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractComponent"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "result" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "description" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "offers" : {
+            "type" : "array",
+            "items" : {
+              "anyOf" : [ {
+                "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/SimpleExecutionSession"
+              }, {
+                "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/ScheduledExecutionSession"
+              } ]
+            }
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "result", "description", "offers" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "AbstractUpdate" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "path" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "path" ]
+    },
+    "StringValueUpdate" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractUpdate"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "value" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "value" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "EnumValueUpdate" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractUpdate"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "value" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "value" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "IntegerValueUpdate" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractUpdate"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "value" : {
+            "type" : "number",
+            "description" : ""
+          },
+          "units" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "value", "units" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "IntegerDeltaUpdate" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/AbstractUpdate"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "delta" : {
+            "type" : "number",
+            "description" : ""
+          },
+          "units" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "delta", "units" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "DockerPlatformSpec" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "architecture" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "os" : {
+          "type" : "string",
+          "description" : ""
+        }
+      },
+      "required" : [ "architecture", "os" ],
+      "additionalProperties" : false
+    },
+    "NameValueMap" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "key" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "value" : {
+          "type" : "string",
+          "description" : ""
+        }
+      },
+      "required" : [ "key", "value" ],
+      "additionalProperties" : false
+    },
+    "DockerInternalPort" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "port" : {
+          "type" : "number",
+          "description" : ""
+        }
+      },
+      "required" : [ "port" ],
+      "additionalProperties" : false
+    },
+    "DockerExternalPort" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "port" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "addresses" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "description" : ""
+        }
+      },
+      "required" : [ "port", "addresses" ],
+      "additionalProperties" : false
+    },
+    "LifecycleStartDurationInstant" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "start" : {
+          "format" : "date-time",
+          "description" : ""
+        },
+        "duration" : {
+          "format" : "duration",
+          "description" : ""
+        }
+      },
+      "required" : [ "start", "duration" ],
+      "additionalProperties" : false
+    },
+    "LifecycleStartDurationInterval" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "start" : {
+          "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/ISO8601Interval",
+          "description" : ""
+        },
+        "duration" : {
+          "format" : "duration",
+          "description" : ""
+        }
+      },
+      "required" : [ "start", "duration" ],
+      "additionalProperties" : false
+    },
+    "LifecycleSchedule" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "preparing" : {
+          "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/LifecycleStartDurationInstant",
+          "description" : ""
+        },
+        "available" : {
+          "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/LifecycleStartDurationInterval",
+          "description" : ""
+        },
+        "releasing" : {
+          "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/LifecycleStartDurationInstant",
+          "description" : ""
+        }
+      },
+      "required" : [ "preparing", "available", "releasing" ],
+      "additionalProperties" : false
+    },
+    "SimpleComputeCores" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "min" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "max" : {
+          "type" : "number",
+          "description" : ""
+        }
+      },
+      "required" : [ "min", "max" ],
+      "additionalProperties" : false
+    },
+    "SimpleComputeMemory" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "min" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "max" : {
+          "type" : "number",
+          "description" : ""
+        }
+      },
+      "required" : [ "min", "max" ],
+      "additionalProperties" : false
+    },
+    "SimpleStorageSize" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "min" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "max" : {
+          "type" : "number",
+          "description" : ""
+        }
+      },
+      "required" : [ "min", "max" ],
+      "additionalProperties" : false
+    },
+    "RucioDataResourceBlock" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "endpoint" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "scope" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "object" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "type" : {
+          "type" : "string",
+          "description" : ""
+        }
+      },
+      "required" : [ "endpoint", "scope", "object", "type" ],
+      "additionalProperties" : false
+    },
+    "SkaoChecksumItem" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "value" : {
+          "type" : "string",
+          "description" : ""
+        }
+      },
+      "required" : [ "type", "value" ],
+      "additionalProperties" : false
+    },
+    "ScheduleStartDurationInstant" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "start" : {
+          "format" : "date-time",
+          "description" : ""
+        },
+        "duration" : {
+          "format" : "duration",
+          "description" : ""
+        }
+      },
+      "required" : [ "start", "duration" ],
+      "additionalProperties" : false
+    },
+    "ScheduleStartDurationInterval" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "start" : {
+          "$ref" : "https://ivoa.net/dm/ExecutionBrokerDM-v1.vo-dml.json#/$defs/ISO8601Interval",
+          "description" : ""
+        },
+        "duration" : {
+          "format" : "duration",
+          "description" : ""
+        }
+      },
+      "required" : [ "start", "duration" ],
+      "additionalProperties" : false
+    },
+    "ISO8601Interval" : {
+      "type" : "object",
+      "properties" : {
+        "value" : "string"
+      }
+    },
+    "LifecyclePhase" : {
+      "description" : "",
+      "enum" : [ "INITIALIZING", "WAITING", "PREPARING", "AVAILABLE", "RUNNING", "RELEASING", "COMPLETED", "FAILED", "CANCELLED" ]
+    },
+    "SimpleExecutionSessionPhase" : {
+      "description" : "",
+      "enum" : [ "INITIAL", "OFFERED", "ACCEPTED", "REJECTED", "EXPIRED", "WAITING", "PREPARING", "AVAILABLE", "RUNNING", "RELEASING", "COMPLETED", "FAILED", "CANCELLED" ]
+    }
+  }
+}

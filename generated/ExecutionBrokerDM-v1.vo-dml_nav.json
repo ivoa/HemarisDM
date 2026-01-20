@@ -1,0 +1,38 @@
+
+
+            {
+            "execbroker model": [
+            {
+            "Overview": "generated/ExecutionBrokerDM-v1.vo-dml.md"
+            }
+
+            
+                ,{
+                "ObjectTypes": [
+
+                {"AbstractComponent" : "generated/execbroker/AbstractComponent.md"},{"AbstractComputeResource" : "generated/execbroker/AbstractComputeResource.md"},{"AbstractDataResource" : "generated/execbroker/AbstractDataResource.md"},{"AbstractExecutable" : "generated/execbroker/AbstractExecutable.md"},{"AbstractExecutionSession" : "generated/execbroker/AbstractExecutionSession.md"},{"AbstractOption" : "generated/execbroker/AbstractOption.md"},{"AbstractStorageResource" : "generated/execbroker/AbstractStorageResource.md"},{"AbstractUpdate" : "generated/execbroker/AbstractUpdate.md"},{"AbstractVolumeMount" : "generated/execbroker/AbstractVolumeMount.md"},{"ComponentMetadata" : "generated/execbroker/ComponentMetadata.md"},{"DockerContainer" : "generated/execbroker/DockerContainer.md"},{"DockerImageSpec" : "generated/execbroker/DockerImageSpec.md"},{"DockerNetworkPort" : "generated/execbroker/DockerNetworkPort.md"},{"DockerNetworkSpec" : "generated/execbroker/DockerNetworkSpec.md"},{"EnumValueOption" : "generated/execbroker/EnumValueOption.md"},{"EnumValueUpdate" : "generated/execbroker/EnumValueUpdate.md"},{"ExecutionRequestComponents" : "generated/execbroker/ExecutionRequestComponents.md"},{"ExecutionSessionResponseFour" : "generated/execbroker/ExecutionSessionResponseFour.md"},{"IntegerDeltaOption" : "generated/execbroker/IntegerDeltaOption.md"},{"IntegerDeltaUpdate" : "generated/execbroker/IntegerDeltaUpdate.md"},{"IntegerValueOption" : "generated/execbroker/IntegerValueOption.md"},{"IntegerValueUpdate" : "generated/execbroker/IntegerValueUpdate.md"},{"IvoaDataLinkItem" : "generated/execbroker/IvoaDataLinkItem.md"},{"IvoaDataResource" : "generated/execbroker/IvoaDataResource.md"},{"IvoaDataResourceBlock" : "generated/execbroker/IvoaDataResourceBlock.md"},{"IvoaObsCoreItem" : "generated/execbroker/IvoaObsCoreItem.md"},{"JupyterNotebook" : "generated/execbroker/JupyterNotebook.md"},{"LifecycleComponent" : "generated/execbroker/LifecycleComponent.md"},{"MessageItem" : "generated/execbroker/MessageItem.md"},{"OfferSetRequest" : "generated/execbroker/OfferSetRequest.md"},{"OfferSetResponse" : "generated/execbroker/OfferSetResponse.md"},{"RequestedScheduleBlock" : "generated/execbroker/RequestedScheduleBlock.md"},{"RequestedScheduleItem" : "generated/execbroker/RequestedScheduleItem.md"},{"RucioDataResource" : "generated/execbroker/RucioDataResource.md"},{"S3DataResource" : "generated/execbroker/S3DataResource.md"},{"ScheduledExecutionSchedule" : "generated/execbroker/ScheduledExecutionSchedule.md"},{"ScheduledExecutionSession" : "generated/execbroker/ScheduledExecutionSession.md"},{"SimpleComputeResource" : "generated/execbroker/SimpleComputeResource.md"},{"SimpleDataResource" : "generated/execbroker/SimpleDataResource.md"},{"SimpleExecutionComponents" : "generated/execbroker/SimpleExecutionComponents.md"},{"SimpleExecutionSession" : "generated/execbroker/SimpleExecutionSession.md"},{"SimpleSessionConnector" : "generated/execbroker/SimpleSessionConnector.md"},{"SimpleStorageResource" : "generated/execbroker/SimpleStorageResource.md"},{"SimpleVolumeMount" : "generated/execbroker/SimpleVolumeMount.md"},{"SingularityContainer" : "generated/execbroker/SingularityContainer.md"},{"SkaoDataResource" : "generated/execbroker/SkaoDataResource.md"},{"SkaoDataResourceBlock" : "generated/execbroker/SkaoDataResourceBlock.md"},{"SkaoReplicaItem" : "generated/execbroker/SkaoReplicaItem.md"},{"StringValueOption" : "generated/execbroker/StringValueOption.md"},{"StringValueUpdate" : "generated/execbroker/StringValueUpdate.md"}
+                ]
+                }
+            
+                ,{
+                "DataTypes": [
+                {"DockerExternalPort" : "generated/execbroker/DockerExternalPort.md"},{"DockerInternalPort" : "generated/execbroker/DockerInternalPort.md"},{"DockerPlatformSpec" : "generated/execbroker/DockerPlatformSpec.md"},{"LifecycleSchedule" : "generated/execbroker/LifecycleSchedule.md"},{"LifecycleStartDurationInstant" : "generated/execbroker/LifecycleStartDurationInstant.md"},{"LifecycleStartDurationInterval" : "generated/execbroker/LifecycleStartDurationInterval.md"},{"NameValueMap" : "generated/execbroker/NameValueMap.md"},{"RucioDataResourceBlock" : "generated/execbroker/RucioDataResourceBlock.md"},{"ScheduleStartDurationInstant" : "generated/execbroker/ScheduleStartDurationInstant.md"},{"ScheduleStartDurationInterval" : "generated/execbroker/ScheduleStartDurationInterval.md"},{"SimpleComputeCores" : "generated/execbroker/SimpleComputeCores.md"},{"SimpleComputeMemory" : "generated/execbroker/SimpleComputeMemory.md"},{"SimpleStorageSize" : "generated/execbroker/SimpleStorageSize.md"},{"SkaoChecksumItem" : "generated/execbroker/SkaoChecksumItem.md"}
+                ]
+                }
+            
+                ,{
+                "PrimitiveTypes": [
+                {"ISO8601Duration" : "generated/execbroker/ISO8601Duration.md"},{"ISO8601Instant" : "generated/execbroker/ISO8601Instant.md"},{"ISO8601Interval" : "generated/execbroker/ISO8601Interval.md"}
+                ]
+                }
+            
+                ,{
+                "Enumerations": [
+                {"LifecyclePhase" : "generated/execbroker/LifecyclePhase.md"},{"SimpleExecutionSessionPhase" : "generated/execbroker/SimpleExecutionSessionPhase.md"}
+                ]
+                }
+            
+            ]
+            }
+
+        
