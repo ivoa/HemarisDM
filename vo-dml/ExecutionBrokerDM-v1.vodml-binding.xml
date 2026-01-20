@@ -6,5 +6,22 @@
         <file>ExecutionBrokerDM-v1.vo-dml.xml</file> <!-- this is the local file name -->
         <java-package>org.ivoa.dm.executionbroker</java-package> <!-- the java package for the generated code -->
         <xml-targetnamespace prefix="execbr">http://ivoa.net/dm/executionBroker/v0.1</xml-targetnamespace>
+        <type-mapping>
+            <vodml-id>ISO8601Instant</vodml-id>
+            <xsd-type>dateTime</xsd-type>
+            <json-type format="date-time">string</json-type>
+        </type-mapping>
+        <type-mapping>
+            <vodml-id>ISO8601Duration</vodml-id>
+            <xsd-type>duration</xsd-type>
+            <json-type format="duration">string</json-type>
+        </type-mapping>
+        <type-detail vodml-id="ISO8601Instant">
+            <isJSONProperty>true</isJSONProperty>
+        </type-detail>
+        <type-detail vodml-id="ISO8601Duration">
+            <isJSONProperty>true</isJSONProperty>
+        </type-detail>
+
     </model>
 </m:mappedModels>
